@@ -8,7 +8,7 @@
 <meta name="description" content="Il calendario degli eventi di Ascoli Piceno scelto da chi ci vive: Quintana, Ascoliva Festival, Mercatino dell'Antiquariato e i grandi appuntamenti dell'anno. Vivili dormendo tra natura e centro storico.">
 <link rel="canonical" href="https://viviascoli.com/eventi.html">
 <meta property="og:title" content="Eventi ad Ascoli Piceno · Quintana, festival e mercatini">
-<meta property="og:description" content="La festa è in piazza, a dieci minuti a piedi. Il riposo, nel verde. Il calendario eventi di Ascoli scelto da chi ci vive.">
+<meta property="og:description" content="Vivi la festa in centro, dormi nella quiete del rifugio. Il calendario eventi di Ascoli scelto da chi ci vive.">
 <meta property="og:image" content="https://viviascoli.com/img/colline-tramonto.webp">
 <link rel="preload" as="image" href="img/colline-tramonto.webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,14 +18,14 @@
   :root{
     --travertino:#F3EADB; --crema:#EADDC8; --inchiostro:#2A241E;
     --terracotta:#B0512F; --ambra:#C98A45; --oliva:#5F6B43; --oliva-scuro:#414B2D;
-    --soft:#7C6F5E;
+    --soft:#6B5E4D;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{font-family:"Hanken Grotesk",sans-serif;color:var(--inchiostro);background:var(--travertino);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
   h1,h2,h3{font-family:"Fraunces",serif;font-weight:500;line-height:1.08;letter-spacing:-.01em}
   .wrap{max-width:1120px;margin:0 auto;padding:0 28px}
-  .eyebrow{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--terracotta);font-weight:600}
+  .eyebrow{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:#9C441F;font-weight:600}
   a{color:inherit}
 
   .back{position:fixed;top:18px;left:18px;z-index:50;background:rgba(243,234,219,.92);backdrop-filter:blur(6px);
@@ -54,6 +54,16 @@
   .intro p{max-width:54ch;margin:0 auto;color:var(--soft);font-size:1.18rem}
   .intro .rule{width:54px;height:2px;background:var(--ambra);margin:0 auto 8px}
 
+  /* OFFERTA QUINTANA */
+  .offerta{padding:0 0 clamp(40px,6vw,80px)}
+  .off-card{background:var(--terracotta);border-radius:18px;padding:clamp(34px,5vw,58px) clamp(24px,4vw,48px);color:#fff;text-align:center;box-shadow:0 18px 48px rgba(176,81,47,.30)}
+  .off-eyebrow{display:block;font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;color:#FBEFE2;font-weight:600;margin-bottom:1em}
+  .off-card h2{font-size:clamp(1.6rem,4vw,2.5rem);margin-bottom:.5em;color:#fff}
+  .off-card p{max-width:58ch;margin:0 auto 1.6em;color:#FDF4EA;font-size:1.08rem}
+  .btn-white{display:inline-block;background:#fff;color:#9C441F;padding:15px 34px;border-radius:40px;text-decoration:none;font-weight:600;transition:transform .25s,box-shadow .25s;box-shadow:0 10px 26px rgba(60,20,5,.25)}
+  .btn-white:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(60,20,5,.35)}
+  .off-note{display:block;margin-top:1.2em;font-size:.85rem;color:#FBEFE2}
+
   /* GRANDI APPUNTAMENTI */
   .grandi{background:var(--oliva-scuro);color:#F2ECDF}
   .grandi .eyebrow{color:#D9B98A}
@@ -61,10 +71,10 @@
   .grandi .sub{color:#D7CFBF;max-width:52ch;margin-bottom:2.4em}
   .ga-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
   .ga-card{background:rgba(243,234,219,.06);border:1px solid rgba(243,234,219,.16);border-radius:14px;padding:26px 24px;display:flex;flex-direction:column}
-  .ga-when{font-family:"Fraunces",serif;font-style:italic;font-size:1rem;color:var(--ambra);display:block;margin-bottom:.7em}
+  .ga-when{font-family:"Fraunces",serif;font-style:italic;font-size:1rem;color:#D9B98A;display:block;margin-bottom:.7em}
   .ga-card h3{font-size:1.4rem;margin-bottom:.4em;color:#fff}
   .ga-card p{color:#D7CFBF;font-size:.98rem;flex:1}
-  .ga-cta{display:inline-block;margin-top:1.1em;color:#F0C99A;font-weight:600;font-size:.92rem;text-decoration:none;transition:color .25s}
+  .ga-cta{display:inline-block;margin-top:1.1em;color:#F0C99A;font-weight:600;font-size:.92rem;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px;text-decoration-color:rgba(240,201,154,.45);transition:color .25s}
   .ga-cta::after{content:"\2192";display:inline-block;margin-left:.35em;transition:transform .25s}
   .ga-cta:hover{color:#fff}
   .ga-cta:hover::after{transform:translateX(5px)}
@@ -82,9 +92,9 @@
   .ev-body h3{font-size:1.3rem;margin-bottom:.1em}
   .ev-luogo{font-size:.88rem;color:var(--soft);margin-bottom:.45em}
   .ev-body p{font-size:.98rem;color:var(--soft)}
-  .ev-cta{display:inline-block;margin-top:.7em;color:var(--terracotta);font-weight:600;font-size:.95rem;text-decoration:none;transition:color .25s}
+  .ev-cta{display:inline-block;margin-top:.7em;color:#9C441F;font-weight:600;font-size:.95rem;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px;text-decoration-color:rgba(156,68,31,.45);transition:color .25s}
   .ev-cta::after{content:"\2192";display:inline-block;margin-left:.35em;transition:transform .25s}
-  .ev-cta:hover{color:#9c441f}
+  .ev-cta:hover{color:#7E300C}
   .ev-cta:hover::after{transform:translateX(5px)}
 
   /* EVENTO + NOTTE */
@@ -182,15 +192,27 @@
     <div class="wrap">
       <span class="eyebrow">Ascoli Piceno · tutto l'anno</span>
       <h1>Eventi ad Ascoli</h1>
-      <p>La festa è in piazza, a dieci minuti a piedi. Il riposo, nel verde.</p>
+      <p>Vivi la festa in centro, dormi nella quiete del rifugio.</p>
     </div>
   </header>
+
+  <main>
 
   <section class="intro"><div class="wrap reveal">
     <div class="rule"></div>
     <span class="eyebrow">Il calendario</span>
     <h2>Scegli l'evento, al resto pensiamo noi</h2>
     <p>Dal rifugio scendi in piazza in un quarto d'ora a piedi: vivi la Quintana, i festival e i mercatini, e a fine serata torni a dormire nel silenzio, tra natura e centro storico.</p>
+  </div></section>
+
+  <section class="offerta" id="pacchetto-quintana"><div class="wrap reveal">
+    <div class="off-card">
+      <span class="off-eyebrow">Offerta Quintana 2026 · solo prenotazione diretta</span>
+      <h2>I biglietti della Giostra li offriamo noi</h2>
+      <p>Prenota 3 notti che includano la sera della Giostra — l'11 luglio in notturna o il 2 agosto, quella della tradizione — e trovi 2 biglietti in omaggio ad aspettarti. Un solo pacchetto disponibile per ciascuna Giostra: chi prima scrive, se lo prende.</p>
+      <a class="btn-white" href="https://wa.me/393514717198?text=Ciao!%20Vorrei%20il%20pacchetto%20Quintana%3A%203%20notti%20con%20i%20biglietti%20della%20Giostra%20in%20omaggio.%20%C3%88%20ancora%20disponibile%3F" target="_blank" rel="noopener">Chiedi se è ancora disponibile</a>
+      <span class="off-note">Valida per prenotazioni dirette via WhatsApp o email, fino a esaurimento.</span>
+    </div>
   </div></section>
 
   <section class="grandi"><div class="wrap reveal">
@@ -376,6 +398,8 @@
       <a class="btn" href="https://wa.me/393514717198?text=Ciao!%20Vorrei%20organizzare%20un%20soggiorno%20per%20un%20evento%20ad%20Ascoli." target="_blank" rel="noopener">Scrivici su WhatsApp</a>
     </div>
   </section>
+
+  </main>
 
   <div class="footer-loghi">
     <img loading="lazy" decoding="async" src="img/loghi-ue.jpg" alt="Cofinanziato dall'Unione Europea · Coesione Italia 21-27 Marche · Repubblica Italiana · Regione Marche" width="1600" height="224">
