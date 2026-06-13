@@ -9,6 +9,7 @@
 <link rel="canonical" href="https://viviascoli.com/">
 <link rel="alternate" hreflang="it" href="https://viviascoli.com/">
 <link rel="alternate" hreflang="en" href="https://viviascoli.com/ascoli-piceno-3-day-itinerary.html">
+<link rel="alternate" hreflang="de" href="https://viviascoli.com/ascoli-piceno-reisefuehrer.html">
 <link rel="preload" as="image" href="img/hero-vista-ascoli.webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,9 +28,10 @@
   .eyebrow{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--terracotta);font-weight:600}
   a{color:inherit}
 
-  .lang{position:fixed;top:18px;right:18px;z-index:50;background:rgba(243,234,219,.92);backdrop-filter:blur(6px);
+  .lang-wrap{position:fixed;top:18px;right:18px;z-index:50;display:flex;gap:8px}
+  .lang{background:rgba(243,234,219,.92);backdrop-filter:blur(6px);
     color:var(--inchiostro);text-decoration:none;font-weight:600;font-size:.82rem;letter-spacing:.08em;
-    padding:8px 16px;border-radius:30px;border:1px solid rgba(42,36,30,.15);transition:background .25s}
+    padding:8px 14px;border-radius:30px;border:1px solid rgba(42,36,30,.15);transition:background .25s}
   .lang:hover{background:#fff}
 
   .hero{position:relative;height:100svh;min-height:600px;display:flex;align-items:flex-end;color:#fff;overflow:hidden}
@@ -167,7 +169,10 @@
 </head>
 <body>
 
-  <a class="lang" href="ascoli-piceno-3-day-itinerary.html" hreflang="en">EN · English</a>
+  <div class="lang-wrap">
+    <a class="lang" href="ascoli-piceno-3-day-itinerary.html" hreflang="en">EN</a>
+    <a class="lang" href="ascoli-piceno-reisefuehrer.html" hreflang="de">DE</a>
+  </div>
 
   <header class="hero">
     <img src="img/hero-vista-ascoli.webp" alt="Vista su Ascoli Piceno dalla collina del Sacro Cuore" width="1280" height="720" fetchpriority="high">
