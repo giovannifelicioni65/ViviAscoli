@@ -70,7 +70,9 @@
   .grandi h2{font-size:clamp(1.7rem,4vw,2.6rem);margin:.3em 0 .4em;max-width:18ch}
   .grandi .sub{color:#D7CFBF;max-width:52ch;margin-bottom:2.4em}
   .ga-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-  .ga-card{background:rgba(243,234,219,.06);border:1px solid rgba(243,234,219,.16);border-radius:14px;padding:26px 24px;display:flex;flex-direction:column}
+  .ga-card{position:relative;overflow:hidden;background:rgba(243,234,219,.06);border:1px solid rgba(243,234,219,.16);border-radius:14px;padding:26px 24px;display:flex;flex-direction:column}
+  .ga-card.quintana::after{content:"";position:absolute;right:-26px;bottom:-22px;width:160px;height:160px;background:url("img/quintana-logo.png") center/contain no-repeat;opacity:.10;pointer-events:none;z-index:0}
+  .ga-card > *{position:relative;z-index:1}
   .ga-when{font-family:"Fraunces",serif;font-style:italic;font-size:1rem;color:#D9B98A;display:block;margin-bottom:.7em}
   .ga-card h3{font-size:1.4rem;margin-bottom:.4em;color:#fff}
   .ga-card p{color:#D7CFBF;font-size:.98rem;flex:1}
@@ -178,6 +180,16 @@
       "description": "Lo storico mercatino del terzo fine settimana del mese: 150 espositori di antiquariato, vintage e collezionismo tra Piazza del Popolo e il centro storico.",
       "location": {"@type": "Place", "name": "Piazza del Popolo e centro storico", "address": {"@type": "PostalAddress", "addressLocality": "Ascoli Piceno", "addressRegion": "AP", "addressCountry": "IT"}},
       "url": "https://viviascoli.com/eventi.html"
+    },
+    {
+      "@type": "Event",
+      "name": "Memorial Troiani 2026",
+      "startDate": "2026-06-16T21:00:00+02:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "description": "27ª edizione del concerto benefico A.I.L. con la direzione artistica di Dardust e la partecipazione di Arisa, Levante, Rkomi e Saturnino.",
+      "location": {"@type": "Place", "name": "Piazza del Popolo", "address": {"@type": "PostalAddress", "addressLocality": "Ascoli Piceno", "addressRegion": "AP", "addressCountry": "IT"}},
+      "url": "https://viviascoli.com/eventi.html"
     }
   ]
 }
@@ -221,14 +233,14 @@
     <p class="sub">Gli eventi che fanno Ascoli, ogni anno. Se vuoi esserci, scrivici per tempo: sono le date più richieste.</p>
     <div class="ga-grid">
 
-      <div class="ga-card">
+      <div class="ga-card quintana">
         <span class="ga-when">Secondo sabato di luglio · in notturna</span>
         <h3>Quintana di luglio</h3>
         <p>Il corteo di 1.500 figuranti attraversa la città al tramonto, poi al Campo Squarcia i sei sestieri si sfidano alla lancia sotto le luci. Nel 2026: sabato 11 luglio.</p>
         <a class="ga-cta" href="https://wa.me/393514717198?text=Ciao!%20Vorrei%20vivere%20la%20Quintana%20di%20luglio%20dormendo%20da%20voi.%20Avete%20disponibilit%C3%A0%3F" target="_blank" rel="noopener">Vivi l'evento, dormi a due passi</a>
       </div>
 
-      <div class="ga-card">
+      <div class="ga-card quintana">
         <span class="ga-when">Prima domenica di agosto</span>
         <h3>Quintana di agosto</h3>
         <p>La Giostra della tradizione, corsa in onore di Sant'Emidio: la più sentita dagli ascolani. Nel 2026: domenica 2 agosto.</p>
@@ -282,7 +294,7 @@
        ════════════════════════════════════════════════════════════════ -->
   <section class="prossimi"><div class="wrap reveal">
     <h2>Prossimi eventi</h2>
-    <p class="sub">Una selezione di chi ad Ascoli ci vive · Aggiornato al 12 giugno 2026</p>
+    <p class="sub">Una selezione di chi ad Ascoli ci vive · Aggiornato al 13 giugno 2026</p>
 
     <div class="ev">
       <div class="ev-date"><span class="ev-day">13–14</span><span class="ev-mon">Giu</span></div>
@@ -291,6 +303,16 @@
         <div class="ev-luogo">Centro storico</div>
         <p>Fumetti, giochi e cosplay invadono le vie di travertino: due giorni di festa per grandi e piccoli.</p>
         <a class="ev-cta" href="https://wa.me/393514717198?text=Ciao!%20Vorrei%20vivere%20Ascoli%20Comics%20e%20Games%20dormendo%20da%20voi.%20Avete%20disponibilit%C3%A0%3F" target="_blank" rel="noopener">Vivi l'evento, dormi a due passi</a>
+      </div>
+    </div>
+
+    <div class="ev">
+      <div class="ev-date"><span class="ev-day">16</span><span class="ev-mon">Giu</span></div>
+      <div class="ev-body">
+        <h3>Memorial Troiani · gran concerto</h3>
+        <div class="ev-luogo">Piazza del Popolo</div>
+        <p>La 27ª edizione del concerto benefico diretto da Dardust, con Arisa, Levante, Rkomi e Saturnino sul palco della piazza. Una grande serata di musica per una buona causa.</p>
+        <a class="ev-cta" href="https://wa.me/393514717198?text=Ciao!%20Vorrei%20assistere%20al%20Memorial%20Troiani%20del%2016%20giugno%20dormendo%20da%20voi.%20Avete%20disponibilit%C3%A0%3F" target="_blank" rel="noopener">Vivi l'evento, dormi a due passi</a>
       </div>
     </div>
 
@@ -409,6 +431,7 @@
     Via Monte Ascensione 9 · 63100 Ascoli Piceno (AP)<br>
     VIVI di Felicioni Giovanni · <a href="https://viviascoli.com">viviascoli.com</a>
     <span class="cin">CIN: IT044007B4Z6GMRI8L</span>
+    <span class="cin" style="margin-top:.5em;font-size:.72rem;color:#7C7363">Logo Giostra della Quintana: Comune di Ascoli Piceno · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer nofollow" style="color:#9C9384">CC BY 4.0</a></span>
   </footer>
 
   <script>
