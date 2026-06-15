@@ -8,8 +8,8 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="manifest" href="/site.webmanifest" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rifugio Collina del Sacro Cuore · Ascoli Piceno</title>
-<meta name="description" content="La pace della collina a due passi dal centro di Ascoli Piceno. Scopri il nostro rifugio esclusivo: percorsi e-bike e un'atmosfera...">
+<title>Rifugio Collina del Sacro Cuore — Appartamento ad Ascoli Piceno</title>
+<meta name="description" content="Appartamento intero ad Ascoli Piceno, tra natura e centro storico. Aria condizionata, cucina attrezzata, terrazza con vista, Wi-Fi e parcheggio gratuito. A 10 min dal Popolo.">
 <link rel="canonical" href="https://viviascoli.com/">
 <link rel="alternate" hreflang="it" href="https://viviascoli.com/">
 <link rel="alternate" hreflang="en" href="https://viviascoli.com/ascoli-piceno-3-day-itinerary.html">
@@ -130,11 +130,30 @@
   footer a{color:var(--ambra);text-decoration:underline;text-underline-offset:3px}
   footer .cin{display:block;margin-top:1em;font-size:.82rem;color:#9C9384;letter-spacing:.04em}
 
+  .struttura .eyebrow{display:block;text-align:center}
+  .struttura h2{font-size:clamp(1.8rem,4.5vw,3rem);text-align:center;max-width:22ch;margin:.3em auto .9em}
+  .struttura .prosa{max-width:62ch;margin:0 auto}
+  .struttura .prosa p{color:var(--soft);font-size:1.12rem;margin-bottom:1.1em}
+  .struttura .prosa p:last-child{margin-bottom:0}
+
+  .servizi{text-align:center}
+  .servizi .eyebrow{display:block}
+  .servizi h2{font-size:clamp(1.8rem,4vw,2.8rem);margin-bottom:.12em}
+  .servizi .sub{color:var(--soft);max-width:50ch;margin:.3em auto 2.4em;font-size:1.05rem}
+  .serv-grid{text-align:left;display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  .serv-group{background:#fff;border:1px solid rgba(42,36,30,.10);border-radius:14px;padding:30px;box-shadow:0 6px 22px rgba(60,40,20,.06)}
+  .serv-group h3{font-family:"Fraunces",serif;font-size:1.4rem;font-weight:500;margin-bottom:.7em;color:var(--inchiostro)}
+  .serv-group ul{list-style:none}
+  .serv-group li{position:relative;padding-left:1.45em;margin-bottom:.5em;color:var(--soft);font-size:1.02rem;line-height:1.5}
+  .serv-group li:last-child{margin-bottom:0}
+  .serv-group li::before{content:"";position:absolute;left:0;top:.6em;width:7px;height:7px;border-radius:50%;background:var(--terracotta)}
+
   @media(max-width:820px){
     .cards{grid-template-columns:1fr;gap:26px}
     .feature{grid-template-columns:1fr}.feature .ph{aspect-ratio:16/10}
     .grid-u{grid-template-columns:repeat(2,1fr)}
     .tasti{grid-template-columns:1fr}
+    .serv-grid{grid-template-columns:1fr}
   }
   @media(max-width:520px){.grid-u{grid-template-columns:1fr}body{font-size:16px}}
 </style>
@@ -157,16 +176,17 @@
     "addressCountry": "IT"
   },
   "amenityFeature": [
-    {
-      "@type": "LocationFeatureSpecification",
-      "name": "Rimessa sicura per biciclette e noleggio e-bike",
-      "value": "True"
-    },
-    {
-      "@type": "LocationFeatureSpecification",
-      "name": "Terrazza",
-      "value": "True"
-    }
+    {"@type":"LocationFeatureSpecification","name":"Intero appartamento","value":true},
+    {"@type":"LocationFeatureSpecification","name":"Aria condizionata","value":true},
+    {"@type":"LocationFeatureSpecification","name":"Riscaldamento","value":true},
+    {"@type":"LocationFeatureSpecification","name":"Wi-Fi gratuito","value":true},
+    {"@type":"LocationFeatureSpecification","name":"Cucina completamente attrezzata","value":true},
+    {"@type":"LocationFeatureSpecification","name":"Lavatrice","value":true},
+    {"@type":"LocationFeatureSpecification","name":"Ferro da stiro","value":true},
+    {"@type":"LocationFeatureSpecification","name":"Terrazza con vista sul centro storico","value":true},
+    {"@type":"LocationFeatureSpecification","name":"Parcheggio gratuito nelle vicinanze","value":true},
+    {"@type":"LocationFeatureSpecification","name":"Rimessa coperta per bici, e-bike e moto","value":true},
+    {"@type":"LocationFeatureSpecification","name":"Culla o lettino su richiesta","value":true}
   ]
 }
 </script>
@@ -200,8 +220,19 @@
     <h2>Un rifugio pensato per il tuo viaggio</h2>
     <div class="cards">
       <div class="card"><span class="num">01</span><h3>Viaggiatori lenti</h3><p>Per scoprire Ascoli senza fretta: la Quintana, le olive ascolane, le piazze di pietra e i borghi del Piceno.</p></div>
-      <div class="card"><span class="num">02</span><h3>Cicloturisti</h3><p>Struttura Bett+Bike: rimessa sicura per le bici e noleggio e-bike. Pronti a ripartire alle prime luci, con le gambe riposate.</p></div>
+      <div class="card"><span class="num">02</span><h3>Cicloturisti</h3><p>Rimessa sicura per bici, e-bike e moto. Pronti a ripartire alle prime luci, con le gambe riposate.</p></div>
       <div class="card"><span class="num">03</span><h3>Viandanti</h3><p>Sul Cammino Francescano della Marca e sul Cammino dei Cappuccini. Un letto vero, una doccia calda e il silenzio dopo una giornata di strada.</p></div>
+    </div>
+  </div></section>
+
+  <section class="struttura"><div class="wrap reveal">
+    <span class="eyebrow">La struttura</span>
+    <h2>Un loft tutto per te, sopra Ascoli</h2>
+    <div class="prosa">
+      <p>Un loft accogliente al terzo e ultimo piano di un tranquillo edificio condominiale, tutto per te. L'accesso tramite le scale condominiali garantisce la massima privacy: l'intero appartamento — camera da letto, cucina completamente attrezzata e bagno privato — è a tua completa disposizione.</p>
+      <p>La posizione rialzata è il nostro piccolo lusso. Una passeggiata di 10-15 minuti ti porta nel cuore di Ascoli, tra le piazze di travertino, con Piazza del Popolo e il Ponte Romano praticamente sotto casa. Al rientro, una leggera salita ti lascia alle spalle il trambusto e ti ripaga con la quiete e il panorama che rendono speciale la struttura. Tra natura e centro storico, senza dover scegliere.</p>
+      <p>Il fiore all'occhiello è l'ampia terrazza condominiale: da qui lo sguardo corre sui tetti del centro storico, ed è il posto giusto per un aperitivo al tramonto o una colazione all'aria aperta, mentre la città cambia colore. Dentro, ambienti semplici e curati, pensati per riposare davvero — ideali per una coppia o una piccola famiglia, con la possibilità di aggiungere una culla o un lettino per i più piccoli.</p>
+      <p>Che tu venga ad Ascoli per una fuga a due, una vacanza tra arte e sapori o per esplorare la natura delle Marche, qui hai una base autentica e riservata. Ti accogliamo di persona al check-in; se preferisci più autonomia, è disponibile il self check-in. Abitiamo qui vicino e restiamo a disposizione per un consiglio, un ristorante o un itinerario su misura — sempre nel rispetto del tuo tempo.</p>
     </div>
   </div></section>
 
@@ -210,7 +241,7 @@
     <div class="txt">
       <span class="eyebrow">La terrazza</span>
       <h2>Dove finisce la giornata</h2>
-      <p>La sera, dalla terrazza, il cielo sopra il Monte Ascensione si accende. È il momento che ti fa venire voglia di restare ancora un giorno.</p>
+      <p>La sera, dalla terrazza, il centro storico di Ascoli si accende di luci e il travertino cambia colore. È il momento che ti fa venire voglia di restare ancora un giorno.</p>
     </div>
   </div></section>
 
@@ -256,6 +287,54 @@
     </div>
   </div></section>
 
+  <section class="servizi"><div class="wrap reveal">
+    <span class="eyebrow">Servizi</span>
+    <h2>Tutto quello che trovi</h2>
+    <p class="sub">L'intero appartamento è solo tuo: ecco cosa è incluso.</p>
+    <div class="serv-grid">
+      <div class="serv-group">
+        <h3>In appartamento</h3>
+        <ul>
+          <li>Aria condizionata e riscaldamento</li>
+          <li>Wi-Fi gratuito</li>
+          <li>Cucina completamente attrezzata: forno, fornello a gas, frigorifero</li>
+          <li>Macchina del caffè, pentole, piatti e posate</li>
+          <li>Tavolo da pranzo (4 posti)</li>
+          <li>Lavatrice e ferro da stiro</li>
+          <li>Tende oscuranti</li>
+          <li>Asciugacapelli e set di cortesia</li>
+          <li>Culla o lettino su richiesta</li>
+        </ul>
+      </div>
+      <div class="serv-group">
+        <h3>Spazi &amp; esterni</h3>
+        <ul>
+          <li>Terrazza condominiale con vista sul centro storico</li>
+          <li>Lettini prendisole</li>
+          <li>Armadio e spazio per i bagagli</li>
+          <li>Biancheria, asciugamani e grucce</li>
+        </ul>
+      </div>
+      <div class="serv-group">
+        <h3>Accesso &amp; servizi</h3>
+        <ul>
+          <li>Intero appartamento, privacy totale</li>
+          <li>Self check-in</li>
+          <li>Parcheggio gratuito lungo la via</li>
+          <li>Rimessa coperta su richiesta per bici, e-bike e moto</li>
+        </ul>
+      </div>
+      <div class="serv-group">
+        <h3>Sicurezza</h3>
+        <ul>
+          <li>Estintore</li>
+          <li>Rilevatore di monossido di carbonio</li>
+          <li>Kit di primo soccorso</li>
+        </ul>
+      </div>
+    </div>
+  </div></section>
+
   <section class="dofare"><div class="wrap reveal">
     <h2>Cosa fare ad Ascoli</h2>
     <p class="sub">Tutto quello che ti tiene qui un giorno in più.</p>
@@ -274,7 +353,7 @@
       </a>
       <a class="tasto" href="attivita.html">
         <span class="tasto-t">Attività</span>
-        <span class="tasto-s">Musei, e-bike e cammini: esperienze sul territorio</span>
+        <span class="tasto-s">Musei, cammini e natura: esperienze sul territorio</span>
       </a>
     </div>
   </div></section>
