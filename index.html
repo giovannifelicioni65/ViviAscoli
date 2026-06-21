@@ -336,6 +336,24 @@
       </div>
     </div>
   </div></section>
+<!-- bookingWidget requires jQuery and jQueryUI -->
+<!-- Include the following line ONCE ONLY on the page, preferably in the document head -->
+<script src='https://media.xmlcal.com/widget/1.01/js/bookWidget.min.js'></script>
+
+<!-- Place this div on your page where you want the widget to show -->
+<div id='bookWidget-168983-334499-0-1782061773'> </div>
+
+<!-- The following will initialize the widget in the above div -->
+<script>
+jQuery(document).ready(function() {
+	jQuery('#bookWidget-168983-334499-0-1782061773').bookWidget({
+		propid:334499,
+		formAction:'https://beds24.com/booking.php',
+		widgetLang:'it',
+		widgetType:'BookingStrip'
+	});
+});
+</script>
 
   <section class="dofare"><div class="wrap reveal">
     <h2>Cosa fare ad Ascoli</h2>
