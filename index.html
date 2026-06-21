@@ -339,20 +339,38 @@
       </div>
     </div>
   </div></section>
-<!-- Place this div on your page where you want the widget to show -->
-<div id='bookWidget-168983-334499-0-1782061773'> </div>
+<div class="wrap" style="background-color: #ffffff; border-radius: 24px; padding: 10px 20px; margin-bottom: 40px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+    
+    <style>
+        #bookWidget-168983-334499-0-1782061773 input,
+        #bookWidget-168983-334499-0-1782061773 button,
+        #bookWidget-168983-334499-0-1782061773 .btn,
+        #bookWidget-168983-334499-0-1782061773 [type="button"] {
+            background-color: #B0512F !important;
+            color: #ffffff !important;
+            border: none !important;
+            border-radius: 6px !important;
+            transition: background 0.2s ease-in-out;
+        }
+        /* Effetto quando si passa sopra con il mouse */
+        #bookWidget-168983-334499-0-1782061773 input:hover,
+        #bookWidget-168983-334499-0-1782061773 button:hover {
+            background-color: #943F22 !important; /* Un terracotta leggermente più scuro per il feedback del clic */
+        }
+    </style>
 
-<!-- The following will initialize the widget in the above div -->
-<script>
-jQuery(document).ready(function() {
-	jQuery('#bookWidget-168983-334499-0-1782061773').bookWidget({
-		propid:334499,
-		formAction:'https://beds24.com/booking.php',
-		widgetLang:'it',
-		widgetType:'BookingStrip'
-	});
-});
-</script>
+    <div id='bookWidget-168983-334499-0-1782061773'> </div>
+    <script>
+    jQuery(document).ready(function() {
+        jQuery('#bookWidget-168983-334499-0-1782061773').bookWidget({
+            propid:334499,
+            formAction:'https://beds24.com/booking.php',
+            widgetLang:'it',
+            widgetType:'BookingStrip'
+        });
+    });
+    </script>
+    </div>
 
   <section class="dofare"><div class="wrap reveal">
     <h2>Cosa fare ad Ascoli</h2>
