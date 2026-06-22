@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Regole e condizioni — Rifugio Collina del Sacro Cuore</title>
+<meta name="description" content="Regole della casa, condizioni di prenotazione e cancellazione e tassa di soggiorno del Rifugio Collina del Sacro Cuore, Ascoli Piceno.">
+<link rel="canonical" href="https://viviascoli.com/condizioni.html">
+<meta name="robots" content="noindex, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --travertino:#F3EADB; --crema:#EADDC8; --inchiostro:#2A241E;
+    --terracotta:#B0512F; --ambra:#C98A45; --oliva:#5F6B43; --oliva-scuro:#414B2D;
+    --soft:#7C6F5E;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Hanken Grotesk",sans-serif;color:var(--inchiostro);background:var(--travertino);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3{font-family:"Fraunces",serif;font-weight:500;line-height:1.12;letter-spacing:-.01em}
+  .wrap{max-width:820px;margin:0 auto;padding:0 28px}
+  .eyebrow{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--terracotta);font-weight:600}
+  a{color:inherit}
+
+  /* selettore lingua */
+  .lang-wrap{position:fixed;top:18px;right:18px;z-index:50;display:flex;gap:8px}
+  .lang{background:rgba(243,234,219,.92);backdrop-filter:blur(6px);color:var(--inchiostro);
+    font-weight:600;font-size:.82rem;letter-spacing:.08em;padding:8px 14px;border-radius:30px;
+    border:1px solid rgba(42,36,30,.15);cursor:pointer;font-family:inherit;transition:background .25s,color .25s}
+  .lang:hover{background:#fff}
+  .lang.active{background:var(--terracotta);color:#fff;border-color:var(--terracotta)}
+
+  /* intestazione */
+  .cond-header{background:var(--crema);padding:clamp(82px,12vw,132px) 0 clamp(40px,6vw,64px);text-align:center;border-bottom:1px solid rgba(176,81,47,.18)}
+  .cond-header .eyebrow{display:block;margin-bottom:.8em}
+  .cond-header h1{font-size:clamp(2rem,5.5vw,3.2rem);margin-bottom:.32em}
+  .cond-header .lead{color:var(--soft);font-size:1.12rem;max-width:48ch;margin:0 auto}
+  .back{display:inline-block;margin-top:1.5em;color:var(--terracotta);text-decoration:none;font-weight:600;font-size:.95rem}
+  .back:hover{text-decoration:underline;text-underline-offset:3px}
+
+  /* contenuto */
+  main{padding:clamp(48px,8vw,90px) 0 clamp(20px,4vw,40px)}
+  .group{margin-bottom:clamp(38px,6vw,60px)}
+  .group:last-child{margin-bottom:0}
+  .group > .eyebrow{display:block;text-align:center;margin-bottom:1.3em}
+  .panel{background:#fff;border:1px solid rgba(42,36,30,.10);border-radius:16px;padding:clamp(26px,4vw,44px);box-shadow:0 8px 28px rgba(60,40,20,.07)}
+  .panel.key{background:var(--crema);border:none;border-left:4px solid var(--terracotta);box-shadow:0 8px 28px rgba(176,81,47,.10)}
+  .rule{padding:22px 0;border-top:1px solid rgba(42,36,30,.10)}
+  .panel.key .rule{border-top-color:rgba(176,81,47,.22)}
+  .rule:first-child{padding-top:0;border-top:none}
+  .rule:last-child{padding-bottom:0}
+  .rule h3{font-size:1.3rem;margin-bottom:.4em}
+  .rule p{color:var(--soft);font-size:1.05rem}
+  .rule .lines span{display:block;color:var(--soft);font-size:1.05rem}
+  .rule .lines span strong{color:var(--inchiostro);font-weight:600}
+
+  /* commutazione lingua */
+  .lang-block{display:none}
+  .lang-block.show{display:block}
+
+  /* footer come nel sito */
+  .footer-loghi{background:#fff;padding:26px 28px;text-align:center;border-top:1px solid rgba(42,36,30,.08)}
+  .footer-loghi img{max-width:100%;width:920px;height:auto}
+  footer{background:var(--inchiostro);color:#C9BEAD;text-align:center;padding:48px 28px;font-size:.92rem}
+  footer .name{font-family:"Fraunces",serif;color:#F3EADB;font-size:1.25rem;margin-bottom:.5em;display:block}
+  footer a{color:var(--ambra);text-decoration:underline;text-underline-offset:3px}
+  footer .cin{display:block;margin-top:1em;font-size:.82rem;color:#9C9384;letter-spacing:.04em}
+
+  @media(max-width:520px){body{font-size:16px}}
+</style>
+</head>
+<body>
+
+  <div class="lang-wrap">
+    <button class="lang active" data-lang="it" onclick="setLang('it')">IT</button>
+    <button class="lang" data-lang="en" onclick="setLang('en')">EN</button>
+    <button class="lang" data-lang="de" onclick="setLang('de')">DE</button>
+  </div>
+
+  <header class="cond-header">
+    <div class="wrap">
+      <div class="lang-block show" data-lang="it">
+        <span class="eyebrow">Rifugio Collina del Sacro Cuore · Informazioni per gli ospiti</span>
+        <h1>Regole della casa e condizioni di prenotazione</h1>
+        <p class="lead">Tutto quello che c'è da sapere prima del soggiorno.</p>
+        <a class="back" href="https://viviascoli.com">← Torna alla home</a>
+      </div>
+      <div class="lang-block" data-lang="en">
+        <span class="eyebrow">Rifugio Collina del Sacro Cuore · Guest information</span>
+        <h1>House rules &amp; booking conditions</h1>
+        <p class="lead">Everything you need to know before your stay.</p>
+        <a class="back" href="https://viviascoli.com">← Back to home</a>
+      </div>
+      <div class="lang-block" data-lang="de">
+        <span class="eyebrow">Rifugio Collina del Sacro Cuore · Gästeinformationen</span>
+        <h1>Hausordnung &amp; Buchungsbedingungen</h1>
+        <p class="lead">Alles, was Sie vor Ihrem Aufenthalt wissen müssen.</p>
+        <a class="back" href="https://viviascoli.com">← Zurück zur Startseite</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+
+      <!-- ITALIANO -->
+      <div class="lang-block show" data-lang="it">
+        <div class="group">
+          <span class="eyebrow">Regole della casa</span>
+          <div class="panel">
+            <div class="rule">
+              <h3>Check-in e check-out</h3>
+              <div class="lines">
+                <span><strong>Check-in:</strong> dalle ore 15:00</span>
+                <span><strong>Check-out:</strong> entro le ore 11:00</span>
+              </div>
+              <p style="margin-top:.55em">Orari diversi possono essere concordati su richiesta, in base alla disponibilità.</p>
+            </div>
+            <div class="rule"><h3>Ospiti</h3><p>La struttura accoglie fino a 2 ospiti. Non è consentito il soggiorno a ospiti non registrati.</p></div>
+            <div class="rule"><h3>Bambini</h3><p>I bambini sono i benvenuti.</p></div>
+            <div class="rule"><h3>Animali domestici</h3><p>È ammesso un solo animale domestico di piccola taglia. L'animale non deve mai essere lasciato solo in struttura senza la presenza del proprietario. Si prega di segnalare la presenza dell'animale al momento della prenotazione.</p></div>
+            <div class="rule"><h3>Silenzio e rispetto dei vicini</h3><p>Si prega di rispettare gli orari di silenzio: dalle 22:00 alle 07:30 e dalle 14:00 alle 16:00.</p></div>
+            <div class="rule"><h3>Fumo</h3><p>È severamente vietato fumare all'interno dell'appartamento. Il fumo è tollerato esclusivamente sulla terrazza condominiale.</p></div>
+            <div class="rule"><h3>Feste ed eventi</h3><p>Non sono ammesse feste, eventi o riunioni di gruppo.</p></div>
+            <div class="rule"><h3>Accessibilità</h3><p>La struttura si trova al terzo e ultimo piano, raggiungibile esclusivamente tramite scale. Non è presente un ascensore.</p></div>
+            <div class="rule"><h3>Bici, e-bike e moto</h3><p>Su richiesta è disponibile un garage coperto e custodito nello stesso stabile per il rimessaggio in sicurezza di bici, e-bike e motociclette.</p></div>
+          </div>
+        </div>
+        <div class="group">
+          <span class="eyebrow">Prenotazione e soggiorno</span>
+          <div class="panel key">
+            <div class="rule"><h3>Condizioni di prenotazione e cancellazione</h3><p>Il pagamento dell'intero importo è richiesto al momento della prenotazione. Cancellazione gratuita fino a 7 giorni prima dell'arrivo: rimborso del 100%. Oltre tale termine, e in caso di mancato arrivo (no-show), non è previsto alcun rimborso.</p></div>
+            <div class="rule"><h3>Tassa di soggiorno</h3><p>L'imposta del Comune di Ascoli Piceno è pari a 2,00 € a notte per persona, fino a un massimo di 5 notti consecutive. L'importo non è incluso nella tariffa del soggiorno e verrà riscosso al momento del check-in.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ENGLISH -->
+      <div class="lang-block" data-lang="en">
+        <div class="group">
+          <span class="eyebrow">House rules</span>
+          <div class="panel">
+            <div class="rule">
+              <h3>Check-in and check-out</h3>
+              <div class="lines">
+                <span><strong>Check-in:</strong> from 3:00 PM</span>
+                <span><strong>Check-out:</strong> by 11:00 AM</span>
+              </div>
+              <p style="margin-top:.55em">Different times can be arranged on request, subject to availability.</p>
+            </div>
+            <div class="rule"><h3>Guests</h3><p>The property accommodates up to 2 guests. Unregistered guests are not allowed to stay.</p></div>
+            <div class="rule"><h3>Children</h3><p>Children are welcome.</p></div>
+            <div class="rule"><h3>Pets</h3><p>One small pet is allowed. The animal must never be left alone in the property without the owner present. Please report the presence of the pet at the time of booking.</p></div>
+            <div class="rule"><h3>Quiet hours and respect for neighbours</h3><p>Please respect quiet hours: from 10:00 PM to 7:30 AM and from 2:00 PM to 4:00 PM.</p></div>
+            <div class="rule"><h3>Smoking</h3><p>Smoking is strictly prohibited inside the apartment. Smoking is permitted only on the shared terrace.</p></div>
+            <div class="rule"><h3>Parties and events</h3><p>Parties, events or group gatherings are not allowed.</p></div>
+            <div class="rule"><h3>Accessibility</h3><p>The property is located on the third and top floor, accessible only by stairs. There is no lift.</p></div>
+            <div class="rule"><h3>Bikes, e-bikes and motorcycles</h3><p>On request, a covered and secure garage is available in the same building for the safe storage of bikes, e-bikes and motorcycles.</p></div>
+          </div>
+        </div>
+        <div class="group">
+          <span class="eyebrow">Booking and stay</span>
+          <div class="panel key">
+            <div class="rule"><h3>Booking and cancellation conditions</h3><p>Payment of the full amount is required at the time of booking. Free cancellation up to 7 days before arrival: 100% refund. After that, and in the event of a no-show, no refund is provided.</p></div>
+            <div class="rule"><h3>Tourist tax</h3><p>The tax set by the Municipality of Ascoli Piceno is €2.00 per person per night, up to a maximum of 5 consecutive nights. The amount is not included in the accommodation rate and will be collected at check-in.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DEUTSCH -->
+      <div class="lang-block" data-lang="de">
+        <div class="group">
+          <span class="eyebrow">Hausordnung</span>
+          <div class="panel">
+            <div class="rule">
+              <h3>Check-in und Check-out</h3>
+              <div class="lines">
+                <span><strong>Check-in:</strong> ab 15:00 Uhr</span>
+                <span><strong>Check-out:</strong> bis 11:00 Uhr</span>
+              </div>
+              <p style="margin-top:.55em">Abweichende Zeiten können auf Anfrage und nach Verfügbarkeit vereinbart werden.</p>
+            </div>
+            <div class="rule"><h3>Gäste</h3><p>Die Unterkunft bietet Platz für bis zu 2 Gäste. Nicht registrierte Gäste dürfen nicht übernachten.</p></div>
+            <div class="rule"><h3>Kinder</h3><p>Kinder sind herzlich willkommen.</p></div>
+            <div class="rule"><h3>Haustiere</h3><p>Ein kleines Haustier ist erlaubt. Das Tier darf niemals ohne Anwesenheit des Besitzers allein in der Unterkunft gelassen werden. Bitte melden Sie das Haustier bei der Buchung an.</p></div>
+            <div class="rule"><h3>Ruhezeiten und Rücksicht auf Nachbarn</h3><p>Bitte beachten Sie die Ruhezeiten: von 22:00 bis 07:30 Uhr und von 14:00 bis 16:00 Uhr.</p></div>
+            <div class="rule"><h3>Rauchen</h3><p>Das Rauchen im Inneren der Wohnung ist streng verboten. Rauchen ist ausschließlich auf der gemeinschaftlichen Terrasse gestattet.</p></div>
+            <div class="rule"><h3>Partys und Veranstaltungen</h3><p>Partys, Veranstaltungen oder Gruppentreffen sind nicht gestattet.</p></div>
+            <div class="rule"><h3>Barrierefreiheit</h3><p>Die Unterkunft befindet sich im dritten und obersten Stock und ist nur über Treppen erreichbar. Ein Aufzug ist nicht vorhanden.</p></div>
+            <div class="rule"><h3>Fahrräder, E-Bikes und Motorräder</h3><p>Auf Anfrage steht im selben Gebäude eine überdachte und gesicherte Garage für die sichere Unterbringung von Fahrrädern, E-Bikes und Motorrädern zur Verfügung.</p></div>
+          </div>
+        </div>
+        <div class="group">
+          <span class="eyebrow">Buchung und Aufenthalt</span>
+          <div class="panel key">
+            <div class="rule"><h3>Buchungs- und Stornobedingungen</h3><p>Die Zahlung des Gesamtbetrags ist zum Zeitpunkt der Buchung erforderlich. Kostenlose Stornierung bis 7 Tage vor Anreise: 100% Rückerstattung. Danach und bei Nichterscheinen (No-Show) erfolgt keine Rückerstattung.</p></div>
+            <div class="rule"><h3>Kurtaxe</h3><p>Die von der Gemeinde Ascoli Piceno festgelegte Steuer beträgt 2,00 € pro Person und Nacht, bis zu maximal 5 aufeinanderfolgenden Nächten. Der Betrag ist nicht im Übernachtungspreis enthalten und wird beim Check-in erhoben.</p></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <div class="footer-loghi">
+    <img loading="lazy" decoding="async" src="img/loghi-ue.jpg" alt="Cofinanziato dall'Unione Europea · Coesione Italia 21-27 Marche · Repubblica Italiana · Regione Marche" width="1600" height="224">
+  </div>
+  <footer>
+    <span class="name">Rifugio Collina del Sacro Cuore</span>
+    Via Monte Ascensione 9 · 63100 Ascoli Piceno (AP)<br>
+    VIVI di Felicioni Giovanni · <a href="https://viviascoli.com">viviascoli.com</a>
+    <span class="cin">CIN: IT044007B4Z6GMRI8L</span>
+  </footer>
+
+  <script>
+    function setLang(l){
+      document.querySelectorAll('.lang-block').forEach(function(b){
+        b.classList.toggle('show', b.dataset.lang === l);
+      });
+      document.querySelectorAll('.lang').forEach(function(p){
+        p.classList.toggle('active', p.dataset.lang === l);
+      });
+      document.documentElement.lang = l;
+      window.scrollTo({top:0, behavior:'instant'});
+    }
+  </script>
+
+</body>
+</html>
