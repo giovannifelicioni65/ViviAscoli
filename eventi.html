@@ -14,6 +14,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+<script src='https://media.xmlcal.com/widget/1.01/js/bookWidget.min.js'></script>
 <style>
   :root{
     --travertino:#F3EADB; --crema:#EADDC8; --inchiostro:#2A241E;
@@ -517,15 +520,48 @@
   </div></section>
   <!-- ════ FINE BLOCCO PROSSIMI EVENTI ════ -->
 
+  <!-- ════ BLOCCO-PONTE · prenota dal rifugio ════ -->
   <section class="pacchetto">
     <img loading="lazy" decoding="async" src="img/terrazza-tramonto.webp" alt="La terrazza del rifugio al tramonto" width="1400" height="1050">
     <div class="wrap reveal">
-      <span class="eyebrow">Evento + notte</span>
-      <h2>Pensa solo a goderti la serata</h2>
-      <p>Dicci a quale evento vuoi esserci: prepariamo il soggiorno intorno alle tue date, con i consigli di chi ad Ascoli ci vive. E al ritorno, il silenzio del verde a dieci minuti dalla piazza.</p>
-      <a class="btn" href="https://wa.me/393514717198?text=Ciao!%20Vorrei%20organizzare%20un%20soggiorno%20per%20un%20evento%20ad%20Ascoli." target="_blank" rel="noopener">Scrivici su WhatsApp</a>
+      <span class="eyebrow">Dove dormire</span>
+      <h2>Vivi l'evento, dormi a due passi</h2>
+      <p>Questa guida la cura il Rifugio Collina del Sacro Cuore: appartamento panoramico sopra la città, parcheggio gratuito appena fuori la ZTL, dieci-quindici minuti a piedi da Piazza del Popolo. Scegli le date qui sotto e prenota — al ritorno dalla festa, il silenzio del verde.</p>
+
+      <div style="background:#fff;border-radius:18px;padding:16px 18px;margin:0 auto 20px;max-width:880px;box-shadow:0 12px 34px rgba(30,22,14,.30);text-align:left">
+        <style>
+          #bookWidget-168983-334499-0-1782061773 input,
+          #bookWidget-168983-334499-0-1782061773 button,
+          #bookWidget-168983-334499-0-1782061773 .btn,
+          #bookWidget-168983-334499-0-1782061773 [type="button"]{
+            background-color:#B0512F !important;color:#fff !important;border:none !important;
+            border-radius:6px !important;transition:background .2s ease-in-out
+          }
+          #bookWidget-168983-334499-0-1782061773 input:hover,
+          #bookWidget-168983-334499-0-1782061773 button:hover{background-color:#943F22 !important}
+        </style>
+        <div id="bookWidget-168983-334499-0-1782061773"></div>
+        <script>
+          jQuery(document).ready(function(){
+            jQuery('#bookWidget-168983-334499-0-1782061773').bookWidget({
+              propid:334499,
+              formAction:'https://beds24.com/booking.php',
+              widgetLang:'it',
+              widgetType:'BookingStrip'
+            });
+          });
+        </script>
+      </div>
+
+      <p style="max-width:48ch;margin:0 auto 1.4em;color:#F0E8DA;font-size:.98rem">Scegli le date sul calendario: il prezzo esatto compare subito, nessuna sorpresa. Per domande o per la Quintana con i biglietti in omaggio, scrivici.</p>
+
+      <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center">
+        <a class="btn" href="https://wa.me/393514717198?text=Ciao!%20Vorrei%20organizzare%20un%20soggiorno%20per%20un%20evento%20ad%20Ascoli." target="_blank" rel="noopener">Scrivici su WhatsApp</a>
+        <a class="btn-white" href="index.html">Scopri il rifugio</a>
+      </div>
     </div>
   </section>
+  <!-- ════ FINE BLOCCO-PONTE ════ -->
 
   </main>
 
