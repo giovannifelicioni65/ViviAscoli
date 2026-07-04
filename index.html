@@ -14,13 +14,12 @@
 <link rel="alternate" hreflang="it" href="https://viviascoli.com/">
 <link rel="alternate" hreflang="en" href="https://viviascoli.com/ascoli-piceno-3-day-itinerary.html">
 <link rel="alternate" hreflang="de" href="https://viviascoli.com/ascoli-piceno-reisefuehrer.html">
-<link rel="preload" as="image" href="img/hero-vista-ascoli.webp" fetchpriority="high">
+<link rel="alternate" hreflang="x-default" href="https://viviascoli.com/">
+<link rel="preload" as="image" href="img/hero-vista-ascoli.webp" imagesrcset="img/hero-vista-ascoli-640.webp 640w, img/hero-vista-ascoli-960.webp 960w, img/hero-vista-ascoli-1280.webp 1280w, img/hero-vista-ascoli.webp 1920w" imagesizes="100vw" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
-<script src='https://media.xmlcal.com/widget/1.01/js/bookWidget.min.js'></script>
+<!-- Script di prenotazione spostati in fondo alla pagina per non bloccare il primo render -->
 <style>
   :root{
     --travertino:#F3EADB; --crema:#EADDC8; --inchiostro:#2A241E;
@@ -44,9 +43,9 @@
   .hero{position:relative;height:100svh;min-height:600px;display:flex;align-items:flex-end;color:#fff;overflow:hidden}
   .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.05);animation:kb 18s ease-out forwards}
   @keyframes kb{to{transform:scale(1)}}
-  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,15,10,.18) 0%,rgba(20,15,10,0) 35%,rgba(25,17,10,.78) 100%)}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,15,10,.18) 0%,rgba(20,15,10,0) 30%,rgba(25,17,10,.42) 62%,rgba(25,17,10,.84) 100%)}
   .hero .wrap{position:relative;z-index:2;padding-bottom:9vh;width:100%}
-  .hero .eyebrow{color:#F0C99A;opacity:0;animation:up .9s .2s forwards}
+  .hero .eyebrow{color:#F2BE72;text-shadow:0 1px 3px rgba(25,17,10,.6),0 2px 18px rgba(25,17,10,.45);opacity:0;animation:up .9s .2s forwards}
   .hero h1{font-size:clamp(2.6rem,7vw,5rem);margin:.18em 0 .35em;text-shadow:0 2px 30px rgba(0,0,0,.35);opacity:0;animation:up .9s .35s forwards}
   .hero p{font-size:clamp(1.05rem,2.2vw,1.35rem);max-width:30ch;color:#F5EEE3;text-shadow:0 1px 12px rgba(0,0,0,.4);opacity:0;animation:up .9s .5s forwards}
   .hero .cta{margin-top:1.8em;opacity:0;animation:up .9s .65s forwards}
@@ -203,7 +202,7 @@
   </div>
 
   <header class="hero">
-    <img src="img/hero-vista-ascoli.webp" alt="Vista su Ascoli Piceno dalla collina del Sacro Cuore" width="1600" height="1067" fetchpriority="high">
+    <img src="img/hero-vista-ascoli.webp" srcset="img/hero-vista-ascoli-640.webp 640w, img/hero-vista-ascoli-960.webp 960w, img/hero-vista-ascoli-1280.webp 1280w, img/hero-vista-ascoli.webp 1920w" sizes="100vw" alt="Vista su Ascoli Piceno dalla collina del Sacro Cuore" width="1920" height="1280" fetchpriority="high">
     <div class="wrap">
       <span class="eyebrow">Ascoli Piceno · sui Cammini delle Marche</span>
       <h1>Rifugio Collina<br>del Sacro Cuore</h1>
@@ -256,7 +255,7 @@
     <div class="cat">
       <div class="cat-title">Esterni & Vista</div>
       <div class="grid-u">
-        <div class="cell"><img loading="lazy" decoding="async" src="img/panorama-ascoli.webp" alt="Panorama su Ascoli" width="900" height="506"></div>
+        <div class="cell"><img loading="lazy" decoding="async" src="img/hero-vista-ascoli-960.webp" alt="Panorama su Ascoli" width="960" height="640"></div>
         <div class="cell"><img loading="lazy" decoding="async" src="img/terrazza.webp" alt="La terrazza" width="900" height="675"></div>
         <div class="cell"><img loading="lazy" decoding="async" src="img/tramonto-terrazza.webp" alt="Tramonto dalla terrazza" width="900" height="675"></div>
       </div>
@@ -360,16 +359,7 @@
     </style>
 
     <div id='bookWidget-168983-334499-0-1782061773'> </div>
-    <script>
-    jQuery(document).ready(function() {
-        jQuery('#bookWidget-168983-334499-0-1782061773').bookWidget({
-            propid:334499,
-            formAction:'https://beds24.com/booking.php',
-            widgetLang:'it',
-            widgetType:'BookingStrip'
-        });
-    });
-    </script>
+    <!-- L'inizializzazione del widget di prenotazione e' in fondo alla pagina -->
     </div>
 
   <section class="dofare"><div class="wrap reveal">
@@ -432,5 +422,33 @@
     const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
     document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   </script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+<script src='https://media.xmlcal.com/widget/1.01/js/bookWidget.min.js'></script>
+<script>
+    jQuery(document).ready(function() {
+        jQuery('#bookWidget-168983-334499-0-1782061773').bookWidget({
+            propid:334499,
+            formAction:'https://beds24.com/booking.php',
+            widgetLang:'it',
+            widgetType:'BookingStrip'
+        });
+    });
+    </script>
+<script>
+(function(){
+  var labels = {numadult:'Numero di ospiti', numchild:'Numero di bambini', _default:'Opzione di prenotazione'};
+  var tries = 0;
+  var timer = setInterval(function(){
+    var sels = document.querySelectorAll('[id^="bookWidget"] select');
+    if (sels.length) {
+      sels.forEach(function(s){
+        if (!s.getAttribute('aria-label')) s.setAttribute('aria-label', labels[s.name] || labels._default);
+      });
+      clearInterval(timer);
+    } else if (++tries > 40) { clearInterval(timer); }
+  }, 500);
+})();
+</script>
 </body>
 </html>

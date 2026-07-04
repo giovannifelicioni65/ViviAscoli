@@ -14,9 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
-<script src='https://media.xmlcal.com/widget/1.01/js/bookWidget.min.js'></script>
+<!-- Script di prenotazione spostati in fondo alla pagina per non bloccare il primo render -->
 <style>
   :root{
     --travertino:#F3EADB; --crema:#EADDC8; --inchiostro:#2A241E;
@@ -547,7 +545,7 @@
 </head>
 <body>
 
-  <a class="back" href="index.html">&#8592; Il Rifugio</a>
+  <a class="back" href="/">&#8592; Il Rifugio</a>
 
   <header class="hero">
     <img src="img/colline-tramonto.webp" alt="Tramonto sulle colline di Ascoli Piceno" width="1400" height="1050" fetchpriority="high">
@@ -832,23 +830,14 @@
           #bookWidget-168983-334499-0-1782061773 button:hover{background-color:#943F22 !important}
         </style>
         <div id="bookWidget-168983-334499-0-1782061773"></div>
-        <script>
-          jQuery(document).ready(function(){
-            jQuery('#bookWidget-168983-334499-0-1782061773').bookWidget({
-              propid:334499,
-              formAction:'https://beds24.com/booking.php',
-              widgetLang:'it',
-              widgetType:'BookingStrip'
-            });
-          });
-        </script>
+        <!-- L'inizializzazione del widget di prenotazione e' in fondo alla pagina -->
       </div>
 
       <p style="max-width:48ch;margin:0 auto 1.4em;color:#F0E8DA;font-size:.98rem">Scegli le date sul calendario: il prezzo esatto compare subito, nessuna sorpresa. Per domande o per la Quintana con i biglietti in omaggio, scrivici.</p>
 
       <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center">
         <a class="btn" href="https://wa.me/393514717198?text=Ciao!%20Vorrei%20organizzare%20un%20soggiorno%20per%20un%20evento%20ad%20Ascoli." target="_blank" rel="noopener">Scrivici su WhatsApp</a>
-        <a class="btn-white" href="index.html">Scopri il rifugio</a>
+        <a class="btn-white" href="/">Scopri il rifugio</a>
       </div>
     </div>
   </section>
@@ -873,5 +862,33 @@
     const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
     document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   </script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+<script src='https://media.xmlcal.com/widget/1.01/js/bookWidget.min.js'></script>
+<script>
+          jQuery(document).ready(function(){
+            jQuery('#bookWidget-168983-334499-0-1782061773').bookWidget({
+              propid:334499,
+              formAction:'https://beds24.com/booking.php',
+              widgetLang:'it',
+              widgetType:'BookingStrip'
+            });
+          });
+        </script>
+<script>
+(function(){
+  var labels = {numadult:'Numero di ospiti', numchild:'Numero di bambini', _default:'Opzione di prenotazione'};
+  var tries = 0;
+  var timer = setInterval(function(){
+    var sels = document.querySelectorAll('[id^="bookWidget"] select');
+    if (sels.length) {
+      sels.forEach(function(s){
+        if (!s.getAttribute('aria-label')) s.setAttribute('aria-label', labels[s.name] || labels._default);
+      });
+      clearInterval(timer);
+    } else if (++tries > 40) { clearInterval(timer); }
+  }, 500);
+})();
+</script>
 </body>
 </html>
