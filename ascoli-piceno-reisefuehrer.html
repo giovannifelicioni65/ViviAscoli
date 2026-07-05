@@ -14,9 +14,9 @@
 <meta property="og:image" content="https://viviascoli.com/img/hero-vista-ascoli.webp">
 <meta property="og:type" content="article">
 <link rel="preload" as="image" href="img/hero-vista-ascoli.webp" fetchpriority="high">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" href="/fonts/fraunces-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/hanken-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
 <style>
   :root{
     --travertino:#F3EADB; --crema:#EADDC8; --inchiostro:#2A241E;
@@ -254,10 +254,14 @@
   <footer>
     <span class="name">Rifugio Collina del Sacro Cuore</span>
     Via Monte Ascensione 9 · 63100 Ascoli Piceno (AP) · Italien<br>
-    VIVI di Felicioni Giovanni · <a href="https://viviascoli.com/de/">viviascoli.com</a> · <a href="https://viviascoli.com/" hreflang="it">Italienische Version</a> · <a href="ascoli-piceno-3-day-itinerary.html" hreflang="en">English version</a>
+    VIVI di Felicioni Giovanni · P.IVA 02600430447 · <a href="https://viviascoli.com/de/">viviascoli.com</a> · <a href="https://viviascoli.com/" hreflang="it">Italienische Version</a> · <a href="ascoli-piceno-3-day-itinerary.html" hreflang="en">English version</a>
     <span class="cin">CIN: IT044007B4Z6GMRI8L</span>
     <span class="cin">© 2026 VIVI di Felicioni Giovanni</span>
-  </footer>
+      <div style="margin-top:.95em;font-size:.9em;opacity:.9"><a href="/privacy.html" style="color:inherit">Privacy</a></div>
+    <a href="https://www.instagram.com/viviascoli/" target="_blank" rel="noopener" aria-label="Instagram — @viviascoli" style="display:inline-flex;align-items:center;gap:.45em;margin-top:.5em;color:inherit;text-decoration:none">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><rect x="2.6" y="2.6" width="18.8" height="18.8" rx="5"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.4" cy="6.6" r="1.05" fill="currentColor" stroke="none"/></svg>@viviascoli
+    </a>
+</footer>
 
   <script>
     const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
