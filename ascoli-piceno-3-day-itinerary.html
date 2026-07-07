@@ -34,10 +34,9 @@
   a{color:inherit}
 
   .lang-wrap{position:fixed;top:18px;right:18px;z-index:50;display:flex;gap:8px}
-  .lang{background:rgba(243,234,219,.92);backdrop-filter:blur(6px);
-    color:var(--inchiostro);text-decoration:none;font-weight:600;font-size:.82rem;letter-spacing:.08em;
-    padding:8px 14px;border-radius:30px;border:1px solid rgba(42,36,30,.15);transition:background .25s}
-  .lang:hover{background:#fff}
+  .lang{background:rgba(243,234,219,.92);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:5px;border-radius:8px;border:1px solid rgba(42,36,30,.15);transition:background .25s,transform .2s;cursor:pointer;line-height:0}
+  .lang svg{height:17px;width:auto;display:block;border-radius:2px;box-shadow:0 0 0 1px rgba(42,36,30,.10)}
+  .lang:hover{background:#fff;transform:translateY(-1px)}
 
   .hero{position:relative;height:92svh;min-height:560px;display:flex;align-items:flex-end;color:#fff;overflow:hidden}
   .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.05);animation:kb 18s ease-out forwards}
@@ -140,8 +139,8 @@
 <body>
 
   <div class="lang-wrap">
-    <a class="lang" href="https://viviascoli.com/" hreflang="it">IT</a>
-    <a class="lang" href="ascoli-piceno-reisefuehrer.html" hreflang="de">DE</a>
+    <a class="lang" href="https://viviascoli.com/" hreflang="it" aria-label="Italiano" title="Italiano"><svg class="flag" viewBox="0 0 3 2" aria-hidden="true"><rect width="1" height="2" fill="#009246"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#CE2B37"/></svg></a>
+    <a class="lang" href="ascoli-piceno-reisefuehrer.html" hreflang="de" aria-label="Deutsch" title="Deutsch"><svg class="flag" viewBox="0 0 3 2" aria-hidden="true"><rect width="3" height="0.6667" fill="#000"/><rect y="0.6667" width="3" height="0.6667" fill="#DD0000"/><rect y="1.3333" width="3" height="0.6667" fill="#FFCE00"/></svg></a>
   </div>
 
   <header class="hero">
