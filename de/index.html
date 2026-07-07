@@ -35,10 +35,9 @@
   a{color:inherit}
 
   .lang-wrap{position:fixed;top:18px;right:18px;z-index:50;display:flex;gap:8px}
-  .lang{background:rgba(243,234,219,.92);backdrop-filter:blur(6px);
-    color:var(--inchiostro);text-decoration:none;font-weight:600;font-size:.82rem;letter-spacing:.08em;
-    padding:8px 14px;border-radius:30px;border:1px solid rgba(42,36,30,.15);transition:background .25s}
-  .lang:hover{background:#fff}
+  .lang{background:rgba(243,234,219,.92);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:5px;border-radius:8px;border:1px solid rgba(42,36,30,.15);transition:background .25s,transform .2s;cursor:pointer;line-height:0}
+  .lang svg{height:17px;width:auto;display:block;border-radius:2px;box-shadow:0 0 0 1px rgba(42,36,30,.10)}
+  .lang:hover{background:#fff;transform:translateY(-1px)}
 
   .hero{position:relative;height:100svh;min-height:600px;display:flex;align-items:flex-end;color:#fff;overflow:hidden}
   .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.05);animation:kb 18s ease-out forwards}
@@ -158,7 +157,16 @@
     .serv-grid{grid-template-columns:1fr}
   }
   @media(max-width:520px){.grid-u{grid-template-columns:1fr}body{font-size:16px}}
-</style>
+
+  .offer-quintana{padding:clamp(40px,7vw,80px) 0}
+  .offer-quintana .oq-card{background:var(--terracotta);color:var(--travertino);border-radius:24px;padding:clamp(32px,5vw,56px);text-align:center;max-width:760px;margin:0 auto;box-shadow:0 20px 50px rgba(42,36,30,.15)}
+  .offer-quintana .oq-eye{display:block;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;opacity:.85;margin-bottom:1em}
+  .offer-quintana .oq-card h2{color:var(--travertino);font-size:clamp(1.9rem,4.5vw,2.8rem);margin:0 0 .5em}
+  .offer-quintana .oq-card p{font-size:1.05rem;line-height:1.7;max-width:52ch;margin:0 auto 1.6em}
+  .offer-quintana .oq-btn{display:inline-block;background:var(--travertino);color:var(--inchiostro);text-decoration:none;font-weight:600;padding:15px 34px;border-radius:30px;transition:transform .2s,background .25s}
+  .offer-quintana .oq-btn:hover{background:#fff;transform:translateY(-2px)}
+  .offer-quintana .oq-note{font-size:.82rem;opacity:.8;margin:1.4em auto 0}
+  </style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -197,8 +205,8 @@
 <body>
 
   <div class="lang-wrap">
-    <a class="lang" href="/" hreflang="it">IT</a>
-    <a class="lang" href="/en/" hreflang="en">EN</a>
+    <a class="lang" href="/" hreflang="it" aria-label="Italiano" title="Italiano"><svg class="flag" viewBox="0 0 3 2" aria-hidden="true"><rect width="1" height="2" fill="#009246"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#CE2B37"/></svg></a>
+    <a class="lang" href="/en/" hreflang="en" aria-label="English" title="English"><svg class="flag flag-gb" viewBox="0 0 60 30" aria-hidden="true"><clipPath id="fukA"><path d="M0,0v30h60V0z"/></clipPath><clipPath id="fukB"><path d="M30,15h30v15zv15h-30zh-30v-15zv-15h30z"/></clipPath><g clip-path="url(#fukA)"><path d="M0,0v30h60V0z" fill="#012169"/><path d="M0,0 60,30M60,0 0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 60,30M60,0 0,30" clip-path="url(#fukB)" stroke="#C8102E" stroke-width="4"/><path d="M30,0v30M0,15h60" stroke="#fff" stroke-width="10"/><path d="M30,0v30M0,15h60" stroke="#C8102E" stroke-width="6"/></g></svg></a>
   </div>
 
   <header class="hero">
@@ -386,6 +394,17 @@
         <span class="tasto-t">Aktivitäten</span>
         <span class="tasto-s">Museen, Wanderwege und Natur rund um Ascoli (auf Italienisch)</span>
       </a>
+    </div>
+  </div></section>
+
+  
+  <section class="offer-quintana"><div class="wrap reveal">
+    <div class="oq-card">
+      <span class="oq-eye">Quintana-Angebot 2026 · nur Direktbuchung</span>
+      <h2>Die Giostra-Tickets gehen auf uns</h2>
+      <p>Buchen Sie 3 Nächte, die den 2. August einschließen — den Tag der traditionellen Giostra — und 2 Eintrittskarten warten als Geschenk auf Sie: unsere Art, Sie willkommen zu heißen. Angebot gültig für maximal zwei Personen; nur ein Paket verfügbar: Wer zuerst schreibt, bekommt es.</p>
+      <a class="oq-btn" href="https://wa.me/393514717198?text=Hallo!%20Ich%20h%C3%A4tte%20gern%20das%20Quintana-Paket%3A%203%20N%C3%A4chte%20inkl.%202.%20August%2C%20mit%20den%202%20Freikarten%20f%C3%BCr%20die%20Giostra.%20Ist%20es%20noch%20verf%C3%BCgbar%3F" target="_blank" rel="noopener">Fragen Sie, ob es noch verfügbar ist</a>
+      <p class="oq-note">Gültig für Direktbuchungen per WhatsApp oder E-Mail, solange der Vorrat reicht.</p>
     </div>
   </div></section>
 
