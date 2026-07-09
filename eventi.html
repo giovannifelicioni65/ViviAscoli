@@ -13,7 +13,20 @@
 <link rel="preload" as="image" href="img/colline-tramonto.webp" fetchpriority="high">
 <link rel="preload" href="/fonts/fraunces-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/hanken-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/fonts/fonts.css">
+<style>
+/* Font ospitati localmente su viviascoli.com — nessuna richiesta a server esterni */
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:100 900;font-display:swap;src:url('/fonts/fraunces-latin-opsz-normal.woff2') format('woff2-variations')}
+@font-face{font-family:'Fraunces';font-style:italic;font-weight:100 900;font-display:swap;src:url('/fonts/fraunces-latin-opsz-italic.woff2') format('woff2-variations')}
+@font-face{font-family:'Hanken Grotesk';font-style:normal;font-weight:100 900;font-display:swap;src:url('/fonts/hanken-grotesk-latin-wght-normal.woff2') format('woff2-variations')}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:300;font-display:swap;src:url('/fonts/cormorant-garamond-latin-300-normal.woff2') format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/cormorant-garamond-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/cormorant-garamond-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:300;font-display:swap;src:url('/fonts/cormorant-garamond-latin-300-italic.woff2') format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:400;font-display:swap;src:url('/fonts/cormorant-garamond-latin-400-italic.woff2') format('woff2')}
+@font-face{font-family:'Jost';font-style:normal;font-weight:300;font-display:swap;src:url('/fonts/jost-latin-300-normal.woff2') format('woff2')}
+@font-face{font-family:'Jost';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/jost-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Jost';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/jost-latin-500-normal.woff2') format('woff2')}
+</style>
 <!-- Script di prenotazione spostati in fondo alla pagina per non bloccare il primo render -->
 <style>
   :root{
@@ -39,10 +52,10 @@
   @keyframes kb{to{transform:scale(1)}}
   .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,15,10,.18) 0%,rgba(20,15,10,0) 35%,rgba(25,17,10,.78) 100%)}
   .hero .wrap{position:relative;z-index:2;padding-bottom:7vh;width:100%}
-  .hero .eyebrow{color:#F0C99A;opacity:0;animation:up .9s .2s forwards}
-  .hero h1{font-size:clamp(2.4rem,6vw,4.2rem);margin:.18em 0 .35em;text-shadow:0 2px 30px rgba(0,0,0,.35);opacity:0;animation:up .9s .35s forwards}
-  .hero p{font-size:clamp(1.05rem,2.2vw,1.3rem);max-width:34ch;color:#F5EEE3;text-shadow:0 1px 12px rgba(0,0,0,.4);opacity:0;animation:up .9s .5s forwards}
-  @keyframes up{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+  .hero .eyebrow{color:#F0C99A;opacity:.01;animation:up .9s .2s forwards}
+  .hero h1{font-size:clamp(2.4rem,6vw,4.2rem);margin:.18em 0 .35em;text-shadow:0 2px 30px rgba(0,0,0,.35);opacity:.01;animation:up .9s .35s forwards}
+  .hero p{font-size:clamp(1.05rem,2.2vw,1.3rem);max-width:34ch;color:#F5EEE3;text-shadow:0 1px 12px rgba(0,0,0,.4);opacity:.01;animation:up .9s .5s forwards}
+  @keyframes up{from{opacity:.01;transform:translateY(26px)}to{opacity:1;transform:none}}
   .btn{display:inline-block;background:var(--terracotta);color:#fff;padding:15px 34px;border-radius:40px;text-decoration:none;font-weight:600;transition:transform .25s,box-shadow .25s,background .25s;box-shadow:0 10px 30px rgba(176,81,47,.35)}
   .btn:hover{transform:translateY(-3px);background:#9c441f;box-shadow:0 14px 38px rgba(176,81,47,.45)}
 
@@ -592,7 +605,7 @@
     <div class="off-card">
       <span class="off-eyebrow">Offerta Quintana 2026 · solo prenotazione diretta</span>
       <h2>I biglietti della Giostra li offriamo noi</h2>
-      <p>Prenota 3 notti che comprendano il 2 agosto, giorno della Giostra della tradizione, e trovi 2 biglietti in omaggio ad aspettarti: il nostro modo di darti il benvenuto. Offerta valida per due persone al massimo — un solo pacchetto disponibile: chi prima scrive, se lo prende.</p>
+      <p>Prenota 3 notti che includano la sera della Giostra — l'11 luglio in notturna o il 2 agosto, quella della tradizione — e trovi 2 biglietti in omaggio ad aspettarti: il nostro modo di darti il benvenuto. Un solo pacchetto disponibile per ciascuna Giostra: chi prima scrive, se lo prende.</p>
       <a class="btn-white" href="https://wa.me/393514717198?text=Ciao!%20Vorrei%20il%20pacchetto%20Quintana%3A%203%20notti%20con%20i%20biglietti%20della%20Giostra%20in%20omaggio.%20%C3%88%20ancora%20disponibile%3F" target="_blank" rel="noopener">Chiedi se è ancora disponibile</a>
       <span class="off-note">Valida per prenotazioni dirette via WhatsApp o email, fino a esaurimento.</span>
     </div>
@@ -660,12 +673,32 @@
        BLOCCO PROSSIMI EVENTI — aggiornare ogni 2 settimane.
        Come fare: apri una chat con Claude e scrivi "aggiorna eventi".
        Claude ti consegna il nuovo blocco da incollare al posto di questo,
-       da qui fino al commento «FINE BLOCCO PROSSIMI EVENTI» compreso, e aggiorna la data "Aggiornato al …".
-  ════════════════════════════════════════════════════════════════ -->
-
+       da <section class="prossimi"> fino a </section> compreso.
+       Ricorda di aggiornare anche la riga "Aggiornato al ...".
+       ════════════════════════════════════════════════════════════════ -->
   <section class="prossimi"><div class="wrap reveal">
     <h2>Prossimi eventi</h2>
-    <p class="sub">Una selezione di chi ad Ascoli ci vive · Aggiornato al 7 luglio 2026</p>
+    <p class="sub">Una selezione di chi ad Ascoli ci vive · Aggiornato al 1 luglio 2026</p>
+
+    <div class="ev">
+      <div class="ev-date"><span class="ev-day">3</span><span class="ev-mon">Lug</span></div>
+      <div class="ev-body">
+        <h3>Aspettando i Saldi · Arte in strada, città in festa</h3>
+        <div class="ev-luogo">Centro storico</div>
+        <p>Musica e performance artistiche lungo le vie, vetrine scenografiche e maestri artigiani in mostra, alla vigilia dei saldi estivi — la sera prima che la Quintana apra il mese più atteso dell'anno.</p>
+        <a class="ev-cta" href="https://wa.me/393514717198?text=Ciao!%20Vorrei%20vivere%20Aspettando%20i%20Saldi%20del%203%20luglio%20dormendo%20da%20voi.%20Avete%20disponibilit%C3%A0%3F" target="_blank" rel="noopener">Vivi l'evento, dormi a due passi</a>
+      </div>
+    </div>
+
+    <div class="ev">
+      <div class="ev-date"><span class="ev-day">4–5</span><span class="ev-mon">Lug</span></div>
+      <div class="ev-body">
+        <h3>La Quintana si apre</h3>
+        <div class="ev-luogo">Piazza del Popolo</div>
+        <p>Lettura del Bando di sfida e Palio degli Sbandieratori e Musici: comincia il mese più atteso dell'anno.</p>
+        <a class="ev-cta" href="https://wa.me/393514717198?text=Ciao!%20Vorrei%20vivere%20l%27apertura%20della%20Quintana%20dormendo%20da%20voi.%20Avete%20disponibilit%C3%A0%3F" target="_blank" rel="noopener">Vivi l'evento, dormi a due passi</a>
+      </div>
+    </div>
 
     <div class="ev">
       <div class="ev-date"><span class="ev-day">8</span><span class="ev-mon">Lug</span></div>
@@ -678,22 +711,12 @@
     </div>
 
     <div class="ev">
-      <div class="ev-date"><span class="ev-day">8–10</span><span class="ev-mon">Lug</span></div>
+      <div class="ev-date"><span class="ev-day">9–10</span><span class="ev-mon">Lug</span></div>
       <div class="ev-body">
         <h3>La Milanesiana</h3>
         <div class="ev-luogo">Teatro Ventidio Basso · ore 21:00</div>
-        <p>La rassegna culturale di Elisabetta Sgarbi al Teatro Ventidio Basso: l'8 Vittorio Sgarbi con «Il cielo più vicino», il 9 Alessio Boni in «Ai margini della luce» su Francesco d'Assisi.</p>
+        <p>La rassegna culturale di Elisabetta Sgarbi fa tappa ad Ascoli: il 9 Alessio Boni in "Ai margini della luce" su Francesco d'Assisi, il 10 Ron in concerto con "Musica e parole".</p>
         <a class="ev-cta" href="https://wa.me/393514717198?text=Ciao!%20Vorrei%20vivere%20La%20Milanesiana%20dormendo%20da%20voi.%20Avete%20disponibilit%C3%A0%3F" target="_blank" rel="noopener">Vivi l'evento, dormi a due passi</a>
-      </div>
-    </div>
-
-    <div class="ev">
-      <div class="ev-date"><span class="ev-day">10</span><span class="ev-mon">Lug</span></div>
-      <div class="ev-body">
-        <h3>Saluto alla Madonna della Pace</h3>
-        <div class="ev-luogo">Piazza Sant'Agostino · ore 19:00</div>
-        <p>La vigilia della Giostra di luglio: la cerimonia con i figuranti apre il weekend più atteso dell'estate ascolana.</p>
-        <a class="ev-cta" href="https://wa.me/393514717198?text=Ciao!%20Vorrei%20vivere%20il%20Saluto%20alla%20Madonna%20della%20Pace%20del%2010%20luglio%20dormendo%20da%20voi.%20Avete%20disponibilit%C3%A0%3F" target="_blank" rel="noopener">Vivi l'evento, dormi a due passi</a>
       </div>
     </div>
 
@@ -703,7 +726,7 @@
         <h3>Giostra della Quintana · in notturna</h3>
         <div class="ev-luogo">Corteo dal centro storico, giostra al Campo Squarcia</div>
         <p>1.500 figuranti sfilano al tramonto, poi i sei sestieri si sfidano alla lancia sotto le luci. L'edizione più scenografica dell'anno.</p>
-        <a class="ev-cta" href="https://wa.me/393514717198?text=Ciao!%20Vorrei%20vivere%20la%20Quintana%20di%20luglio%20in%20notturna%20dormendo%20da%20voi.%20Avete%20disponibilit%C3%A0%3F" target="_blank" rel="noopener">Vivi l'evento, dormi a due passi</a>
+        <a class="ev-cta" href="https://wa.me/393514717198?text=Ciao!%20Vorrei%20vivere%20la%20Quintana%20di%20luglio%20dormendo%20da%20voi.%20Avete%20disponibilit%C3%A0%3F" target="_blank" rel="noopener">Vivi l'evento, dormi a due passi</a>
       </div>
     </div>
 
@@ -718,46 +741,6 @@
     </div>
 
     <div class="ev">
-      <div class="ev-date"><span class="ev-day">14</span><span class="ev-mon">Lug</span></div>
-      <div class="ev-body">
-        <h3>La Corsa di Homer</h3>
-        <div class="ev-luogo">Piazza Arringo</div>
-        <p>Decima edizione della corsa in maschera più scanzonata dell'estate: centinaia di runner mascherati partono da Piazza Arringo e sfrecciano nel centro storico.</p>
-        <a class="ev-cta" href="https://wa.me/393514717198?text=Ciao!%20Vorrei%20vivere%20La%20Corsa%20di%20Homer%20del%2014%20luglio%20dormendo%20da%20voi.%20Avete%20disponibilit%C3%A0%3F" target="_blank" rel="noopener">Vivi l'evento, dormi a due passi</a>
-      </div>
-    </div>
-
-    <div class="ev">
-      <div class="ev-date"><span class="ev-day">20–21</span><span class="ev-mon">Lug</span></div>
-      <div class="ev-body">
-        <h3>Ascoli in Blues</h3>
-        <div class="ev-luogo">Piazza del Popolo</div>
-        <p>Due sere di black music in piazza tra blues, funk, soul e gospel: il 20 Kevin «Sonny» Gullage & the Blues Groovers, il 21 la Butter Funk Family.</p>
-        <a class="ev-cta" href="https://wa.me/393514717198?text=Ciao!%20Vorrei%20vivere%20Ascoli%20in%20Blues%20dormendo%20da%20voi.%20Avete%20disponibilit%C3%A0%3F" target="_blank" rel="noopener">Vivi l'evento, dormi a due passi</a>
-      </div>
-    </div>
-
-    <div class="ev">
-      <div class="ev-date"><span class="ev-day">22</span><span class="ev-mon">Lug</span></div>
-      <div class="ev-body">
-        <h3>TAU · Teatri Antichi Uniti</h3>
-        <div class="ev-luogo">Chiostro di Sant'Agostino</div>
-        <p>La rassegna di teatro classico nei luoghi storici del Piceno fa tappa nel Chiostro di Sant'Agostino.</p>
-        <a class="ev-cta" href="https://wa.me/393514717198?text=Ciao!%20Vorrei%20vivere%20il%20TAU%20Teatri%20Antichi%20Uniti%20del%2022%20luglio%20dormendo%20da%20voi.%20Avete%20disponibilit%C3%A0%3F" target="_blank" rel="noopener">Vivi l'evento, dormi a due passi</a>
-      </div>
-    </div>
-
-    <div class="ev">
-      <div class="ev-date"><span class="ev-day">24</span><span class="ev-mon">Lug</span></div>
-      <div class="ev-body">
-        <h3>«Fare un film è un'avventura»</h3>
-        <div class="ev-luogo">Chiostro maggiore di San Francesco</div>
-        <p>Una serata dedicata al cinema nella cornice del Chiostro di San Francesco.</p>
-        <a class="ev-cta" href="https://wa.me/393514717198?text=Ciao!%20Vorrei%20vivere%20Fare%20un%20film%20%C3%A8%20un%27avventura%2C%20il%2024%20luglio%20dormendo%20da%20voi.%20Avete%20disponibilit%C3%A0%3F" target="_blank" rel="noopener">Vivi l'evento, dormi a due passi</a>
-      </div>
-    </div>
-
-    <div class="ev">
       <div class="ev-date"><span class="ev-day">24</span><span class="ev-mon">Lug</span></div>
       <div class="ev-body">
         <h3>Notte Bianca di Porta Maggiore</h3>
@@ -768,32 +751,12 @@
     </div>
 
     <div class="ev">
-      <div class="ev-date"><span class="ev-day">25</span><span class="ev-mon">Lug</span></div>
-      <div class="ev-body">
-        <h3>Esposizione auto sportive e storiche</h3>
-        <div class="ev-luogo">Ascoli San Giacomo</div>
-        <p>Auto sportive e vetture d'epoca in mostra nel quartiere di San Giacomo.</p>
-        <a class="ev-cta" href="https://wa.me/393514717198?text=Ciao!%20Vorrei%20vivere%20l%27esposizione%20di%20auto%20sportive%20e%20storiche%20del%2025%20luglio%20dormendo%20da%20voi.%20Avete%20disponibilit%C3%A0%3F" target="_blank" rel="noopener">Vivi l'evento, dormi a due passi</a>
-      </div>
-    </div>
-
-    <div class="ev">
       <div class="ev-date"><span class="ev-day">26</span><span class="ev-mon">Lug</span></div>
       <div class="ev-body">
         <h3>La Quintana di agosto si apre</h3>
         <div class="ev-luogo">Piazza del Popolo e centro storico</div>
         <p>Presentazione del Palio e lettura del Bando di Sfida della Giostra di agosto: la città entra nel clima della Giostra di Sant'Emidio.</p>
         <a class="ev-cta" href="https://wa.me/393514717198?text=Ciao!%20Vorrei%20vivere%20l%27apertura%20della%20Quintana%20di%20agosto%20dormendo%20da%20voi.%20Avete%20disponibilit%C3%A0%3F" target="_blank" rel="noopener">Vivi l'evento, dormi a due passi</a>
-      </div>
-    </div>
-
-    <div class="ev">
-      <div class="ev-date"><span class="ev-day">29</span><span class="ev-mon">Lug</span></div>
-      <div class="ev-body">
-        <h3>TAU · Teatri Antichi Uniti</h3>
-        <div class="ev-luogo">Chiostro di Sant'Agostino</div>
-        <p>Nuovo appuntamento della rassegna di teatro classico nel Chiostro di Sant'Agostino.</p>
-        <a class="ev-cta" href="https://wa.me/393514717198?text=Ciao!%20Vorrei%20vivere%20il%20TAU%20Teatri%20Antichi%20Uniti%20del%2029%20luglio%20dormendo%20da%20voi.%20Avete%20disponibilit%C3%A0%3F" target="_blank" rel="noopener">Vivi l'evento, dormi a due passi</a>
       </div>
     </div>
 
@@ -936,19 +899,8 @@
 </footer>
 
   <script>
-  (function(){
-    function revealAll(){ document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); }); }
-    try {
-      if ('IntersectionObserver' in window) {
-        var io = new IntersectionObserver(function(entries){
-          entries.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-        }, {threshold:0});
-        document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
-      } else {
-        revealAll();
-      }
-    } catch (e) { revealAll(); }
-  })();
+    const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   </script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>

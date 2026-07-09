@@ -14,7 +14,20 @@
 <meta name="robots" content="noindex, follow">
 <link rel="preload" href="/fonts/fraunces-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/hanken-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/fonts/fonts.css">
+<style>
+/* Font ospitati localmente su viviascoli.com — nessuna richiesta a server esterni */
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:100 900;font-display:swap;src:url('/fonts/fraunces-latin-opsz-normal.woff2') format('woff2-variations')}
+@font-face{font-family:'Fraunces';font-style:italic;font-weight:100 900;font-display:swap;src:url('/fonts/fraunces-latin-opsz-italic.woff2') format('woff2-variations')}
+@font-face{font-family:'Hanken Grotesk';font-style:normal;font-weight:100 900;font-display:swap;src:url('/fonts/hanken-grotesk-latin-wght-normal.woff2') format('woff2-variations')}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:300;font-display:swap;src:url('/fonts/cormorant-garamond-latin-300-normal.woff2') format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/cormorant-garamond-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/cormorant-garamond-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:300;font-display:swap;src:url('/fonts/cormorant-garamond-latin-300-italic.woff2') format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:400;font-display:swap;src:url('/fonts/cormorant-garamond-latin-400-italic.woff2') format('woff2')}
+@font-face{font-family:'Jost';font-style:normal;font-weight:300;font-display:swap;src:url('/fonts/jost-latin-300-normal.woff2') format('woff2')}
+@font-face{font-family:'Jost';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/jost-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Jost';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/jost-latin-500-normal.woff2') format('woff2')}
+</style>
 <style>
   :root{
     --travertino:#F3EADB; --crema:#EADDC8; --inchiostro:#2A241E;
@@ -31,10 +44,11 @@
 
   /* selettore lingua */
   .lang-wrap{position:fixed;top:18px;right:18px;z-index:50;display:flex;gap:8px}
-  .lang{background:rgba(243,234,219,.92);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:5px;border-radius:8px;border:1px solid rgba(42,36,30,.15);transition:background .25s,transform .2s;cursor:pointer;line-height:0}
-  .lang svg{height:17px;width:auto;display:block;border-radius:2px;box-shadow:0 0 0 1px rgba(42,36,30,.10)}
-  .lang:hover{background:#fff;transform:translateY(-1px)}
-  .lang.active{background:#fff;border-color:var(--terracotta);box-shadow:0 0 0 2px var(--terracotta)}
+  .lang{background:rgba(243,234,219,.92);backdrop-filter:blur(6px);color:var(--inchiostro);
+    font-weight:600;font-size:.82rem;letter-spacing:.08em;padding:8px 14px;border-radius:30px;
+    border:1px solid rgba(42,36,30,.15);cursor:pointer;font-family:inherit;transition:background .25s,color .25s}
+  .lang:hover{background:#fff}
+  .lang.active{background:var(--terracotta);color:#fff;border-color:var(--terracotta)}
 
   /* intestazione */
   .cond-header{background:var(--crema);padding:clamp(82px,12vw,132px) 0 clamp(40px,6vw,64px);text-align:center;border-bottom:1px solid rgba(176,81,47,.18)}
@@ -78,9 +92,9 @@
 <body>
 
   <div class="lang-wrap">
-    <button class="lang active" data-lang="it" onclick="setLang('it')" aria-label="Italiano" title="Italiano"><svg class="flag" viewBox="0 0 3 2" aria-hidden="true"><rect width="1" height="2" fill="#009246"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#CE2B37"/></svg></button>
-    <button class="lang" data-lang="en" onclick="setLang('en')" aria-label="English" title="English"><svg class="flag flag-gb" viewBox="0 0 60 30" aria-hidden="true"><clipPath id="fukA"><path d="M0,0v30h60V0z"/></clipPath><clipPath id="fukB"><path d="M30,15h30v15zv15h-30zh-30v-15zv-15h30z"/></clipPath><g clip-path="url(#fukA)"><path d="M0,0v30h60V0z" fill="#012169"/><path d="M0,0 60,30M60,0 0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 60,30M60,0 0,30" clip-path="url(#fukB)" stroke="#C8102E" stroke-width="4"/><path d="M30,0v30M0,15h60" stroke="#fff" stroke-width="10"/><path d="M30,0v30M0,15h60" stroke="#C8102E" stroke-width="6"/></g></svg></button>
-    <button class="lang" data-lang="de" onclick="setLang('de')" aria-label="Deutsch" title="Deutsch"><svg class="flag" viewBox="0 0 3 2" aria-hidden="true"><rect width="3" height="0.6667" fill="#000"/><rect y="0.6667" width="3" height="0.6667" fill="#DD0000"/><rect y="1.3333" width="3" height="0.6667" fill="#FFCE00"/></svg></button>
+    <button class="lang active" data-lang="it" onclick="setLang('it')">IT</button>
+    <button class="lang" data-lang="en" onclick="setLang('en')">EN</button>
+    <button class="lang" data-lang="de" onclick="setLang('de')">DE</button>
   </div>
 
   <header class="cond-header">
