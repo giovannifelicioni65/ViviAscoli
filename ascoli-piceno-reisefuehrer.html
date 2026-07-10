@@ -46,10 +46,9 @@
   a{color:inherit}
 
   .lang-wrap{position:fixed;top:18px;right:18px;z-index:50;display:flex;gap:8px}
-  .lang{background:rgba(243,234,219,.92);backdrop-filter:blur(6px);
-    color:var(--inchiostro);text-decoration:none;font-weight:600;font-size:.82rem;letter-spacing:.08em;
-    padding:8px 14px;border-radius:30px;border:1px solid rgba(42,36,30,.15);transition:background .25s}
-  .lang:hover{background:#fff}
+  .lang{background:rgba(243,234,219,.92);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:5px;border-radius:8px;border:1px solid rgba(42,36,30,.15);transition:background .25s,transform .2s;cursor:pointer;line-height:0}
+  .lang svg{height:17px;width:auto;display:block;border-radius:2px;box-shadow:0 0 0 1px rgba(42,36,30,.10)}
+  .lang:hover{background:#fff;transform:translateY(-1px)}
 
   .hero{position:relative;height:92svh;min-height:560px;display:flex;align-items:flex-end;color:#fff;overflow:hidden}
   .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.05);animation:kb 18s ease-out forwards}
@@ -150,8 +149,8 @@
 <body>
 
   <div class="lang-wrap">
-    <a class="lang" href="https://viviascoli.com/" hreflang="it">IT</a>
-    <a class="lang" href="ascoli-piceno-3-day-itinerary.html" hreflang="en">EN</a>
+    <a class="lang" href="https://viviascoli.com/" hreflang="it" aria-label="Italiano" title="Italiano"><svg class="flag" viewBox="0 0 3 2" aria-hidden="true"><rect width="1" height="2" fill="#009246"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#CE2B37"/></svg></a>
+    <a class="lang" href="ascoli-piceno-3-day-itinerary.html" hreflang="en" aria-label="English" title="English"><svg class="flag flag-gb" viewBox="0 0 60 30" aria-hidden="true"><clipPath id="fukA"><path d="M0,0v30h60V0z"/></clipPath><clipPath id="fukB"><path d="M30,15h30v15zv15h-30zh-30v-15zv-15h30z"/></clipPath><g clip-path="url(#fukA)"><path d="M0,0v30h60V0z" fill="#012169"/><path d="M0,0 60,30M60,0 0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 60,30M60,0 0,30" clip-path="url(#fukB)" stroke="#C8102E" stroke-width="4"/><path d="M30,0v30M0,15h60" stroke="#fff" stroke-width="10"/><path d="M30,0v30M0,15h60" stroke="#C8102E" stroke-width="6"/></g></svg></a>
   </div>
 
   <header class="hero">
@@ -247,7 +246,7 @@
           #bookWidget-168983-334499-0-1782061773 input:hover,
           #bookWidget-168983-334499-0-1782061773 button:hover{background-color:#943F22 !important}
         </style>
-        <div id="bookWidget-168983-334499-0-1782061773"></div>
+        <div id='bookWidget-168983-334499-0-1782061773'><div style="text-align:center;padding:14px 0"><a class="btn" href="https://beds24.com/booking.php?propid=334499&amp;lang=de" target="_blank" rel="noopener">Verfügbarkeit prüfen &amp; buchen</a></div></div>
         <!-- Das Buchungswidget wird am Ende der Seite initialisiert -->
       </div>
     <p>Schreiben Sie uns — Sie bekommen Giovanni und Daniela, kein Callcenter. Wir antworten mit Verfügbarkeit, unserem besten Direktpreis und ein paar Ideen für Ihre Tage. Wir sprechen Italienisch und etwas Englisch — auf Deutsch verständigen wir uns gern per Übersetzung.</p>
@@ -280,32 +279,30 @@
     const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
     document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   </script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
-<script src='https://media.xmlcal.com/widget/1.01/js/bookWidget.min.js'></script>
 <script>
-          jQuery(document).ready(function(){
-            jQuery('#bookWidget-168983-334499-0-1782061773').bookWidget({
-              propid:334499,
-              formAction:'https://beds24.com/booking.php',
-              widgetLang:'de',
-              widgetType:'BookingStrip'
-            });
-          });
-</script>
-<script>
+/* Caricamento pigro del widget Beds24: jQuery, jQuery UI e il widget (~450 KB)
+   partono alla prima interazione o quando ci si avvicina al widget, e comunque
+   7 secondi dopo il caricamento della pagina. */
 (function(){
+  var WID='bookWidget-168983-334499-0-1782061773';
   var labels = {numadult:'Anzahl der Gäste', numchild:'Anzahl der Kinder', _default:'Buchungsoption'};
-  var tries = 0;
-  var timer = setInterval(function(){
-    var sels = document.querySelectorAll('[id^="bookWidget"] select');
-    if (sels.length) {
-      sels.forEach(function(s){
-        if (!s.getAttribute('aria-label')) s.setAttribute('aria-label', labels[s.name] || labels._default);
-      });
-      clearInterval(timer);
-    } else if (++tries > 40) { clearInterval(timer); }
-  }, 500);
+  var started=false;
+  function load(src){return new Promise(function(ok,ko){var s=document.createElement('script');s.async=false;s.src=src;s.onload=ok;s.onerror=ko;document.body.appendChild(s)})}
+  function fixAria(){var tries=0;var t=setInterval(function(){var sels=document.querySelectorAll('[id^="bookWidget"] select');if(sels.length){sels.forEach(function(s){if(!s.getAttribute('aria-label'))s.setAttribute('aria-label',labels[s.name]||labels._default)});clearInterval(t)}else if(++tries>40){clearInterval(t)}},500)}
+  function boot(){if(started)return;started=true;
+    load('https://code.jquery.com/jquery-3.6.0.min.js')
+    .then(function(){return load('https://code.jquery.com/ui/1.13.2/jquery-ui.min.js')})
+    .then(function(){return load('https://media.xmlcal.com/widget/1.01/js/bookWidget.min.js')})
+    .then(function(){jQuery('#'+WID).bookWidget({propid:334499,formAction:'https://beds24.com/booking.php',widgetLang:'de',widgetType:'BookingStrip'});fixAria()})
+    .catch(function(e){if(window.console)console.warn('Booking widget:',e)});
+  }
+  var el=document.getElementById(WID);
+  if('IntersectionObserver' in window && el){
+    var iow=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){iow.disconnect();boot()}})},{rootMargin:'1200px 0px'});
+    iow.observe(el);
+    ['pointerdown','touchstart','touchmove','mousemove','wheel','keydown','scroll'].forEach(function(ev){window.addEventListener(ev,boot,{once:true,passive:true})});
+    if(document.readyState==='complete'){setTimeout(boot,7000)}else{window.addEventListener('load',function(){setTimeout(boot,7000)})}
+  } else { boot(); }
 })();
 </script>
 </body>
