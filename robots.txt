@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://viviascoli.com/sitemap.xml

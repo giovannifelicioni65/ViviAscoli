@@ -4,7 +4,7 @@
 
   <url>
     <loc>https://viviascoli.com/</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://viviascoli.com/"/>
@@ -55,10 +55,34 @@
 
   <url>
     <loc>https://viviascoli.com/attivita.html</loc>
-    <lastmod>2026-06-15</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://viviascoli.com/attivita.html"/>
+  </url>
+
+  <url>
+    <loc>https://viviascoli.com/cammino-francescano-della-marca.html</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://viviascoli.com/cammino-francescano-della-marca.html"/>
+  </url>
+
+  <url>
+    <loc>https://viviascoli.com/cammino-dei-cappuccini.html</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://viviascoli.com/cammino-dei-cappuccini.html"/>
+  </url>
+
+  <url>
+    <loc>https://viviascoli.com/bike-friendly-ascoli.html</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://viviascoli.com/bike-friendly-ascoli.html"/>
   </url>
 
   <url>
@@ -71,7 +95,7 @@
 
   <url>
     <loc>https://viviascoli.com/eventi.html</loc>
-    <lastmod>2026-06-19</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://viviascoli.com/eventi.html"/>
