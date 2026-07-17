@@ -54,6 +54,8 @@
 
   .hero{position:relative;height:100svh;min-height:600px;display:flex;align-items:flex-end;color:#fff;overflow:hidden}
   .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.05);animation:kb 18s ease-out forwards}
+  .hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.2s ease}
+  .hero video.on{opacity:1}
   @keyframes kb{to{transform:scale(1)}}
   .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,15,10,.18) 0%,rgba(20,15,10,0) 30%,rgba(25,17,10,.42) 62%,rgba(25,17,10,.84) 100%)}
   .hero .wrap{position:relative;z-index:2;padding-bottom:9vh;width:100%}
@@ -175,20 +177,12 @@
 {
   "@context": "https://schema.org",
   "@type": "LodgingBusiness",
-  "@id": "https://viviascoli.com/#struttura",
   "name": "Rifugio Collina del Sacro Cuore",
-  "legalName": "VIVI di Felicioni Giovanni",
-  "vatID": "IT02600430447",
-  "description": "Appartamento intero ad Ascoli Piceno, sulla collina del Sacro Cuore, tra natura e centro storico. A 10-15 minuti a piedi da Piazza del Popolo, sul tracciato dei Cammini delle Marche.",
-  "url": "https://viviascoli.com/",
+  "description": "Un luogo dove fermarsi, sulla collina che guarda Ascoli. A due passi dal centro, sui sentieri dei Cammini.",
+  "url": "https://viviascoli.com",
   "telephone": "+39 351 4717198",
   "email": "info@viviascoli.com",
-  "image": [
-    "https://viviascoli.com/img/hero-vista-ascoli.webp",
-    "https://viviascoli.com/img/terrazza-tramonto.webp",
-    "https://viviascoli.com/img/camera-matrimoniale.webp",
-    "https://viviascoli.com/img/cucina.webp"
-  ],
+  "image": "https://viviascoli.com/img/hero-vista-ascoli.webp",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Via Monte Ascensione 9",
@@ -197,12 +191,6 @@
     "addressRegion": "AP",
     "addressCountry": "IT"
   },
-  "hasMap": "https://maps.google.com/?cid=13569962575839359633",
-  "sameAs": [
-    "https://www.instagram.com/viviascoli/",
-    "https://www.booking.com/hotel/it/casa-vacanze-cimanforca.it.html"
-  ],
-  "numberOfRooms": 1,
   "amenityFeature": [
     {"@type":"LocationFeatureSpecification","name":"Intero appartamento","value":true},
     {"@type":"LocationFeatureSpecification","name":"Aria condizionata","value":true},
@@ -229,6 +217,7 @@
 
   <header class="hero">
     <img src="img/hero-vista-ascoli.webp" srcset="img/hero-vista-ascoli-640.webp 640w, img/hero-vista-ascoli-960.webp 960w, img/hero-vista-ascoli-1280.webp 1280w, img/hero-vista-ascoli.webp 1920w" sizes="100vw" alt="Vista su Ascoli Piceno dalla collina del Sacro Cuore" width="1920" height="1280" fetchpriority="high">
+    <video muted loop playsinline aria-hidden="true" tabindex="-1"></video>
     <div class="wrap">
       <span class="eyebrow">Ascoli Piceno · sui Cammini delle Marche</span>
       <h1>Rifugio Collina<br>del Sacro Cuore</h1>
@@ -408,14 +397,6 @@
         <span class="tasto-t">Attività</span>
         <span class="tasto-s">Musei, cammini e natura: esperienze sul territorio</span>
       </a>
-      <a class="tasto" href="cammino-francescano-della-marca.html">
-        <span class="tasto-t">Arrivi a piedi?</span>
-        <span class="tasto-s">Il rifugio sul Cammino Francescano della Marca e sul Cammino dei Cappuccini</span>
-      </a>
-      <a class="tasto" href="bike-friendly-ascoli.html">
-        <span class="tasto-t">Arrivi in bici?</span>
-        <span class="tasto-s">Base bike friendly: rimessa coperta, e-bike e percorsi</span>
-      </a>
     </div>
   </div></section>
 
@@ -484,6 +465,15 @@
     ['pointerdown','touchstart','touchmove','mousemove','wheel','keydown','scroll'].forEach(function(ev){window.addEventListener(ev,boot,{once:true,passive:true})});
     if(document.readyState==='complete'){setTimeout(boot,7000)}else{window.addEventListener('load',function(){setTimeout(boot,7000)})}
   } else { boot(); }
+})();
+</script>
+<script>
+(function(){
+  var v=document.querySelector('.hero video');if(!v)return;
+  if((navigator.connection&&navigator.connection.saveData)||(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)){v.remove();return;}
+  v.src='img/hero-video.mp4';v.muted=true;
+  v.addEventListener('playing',function(){v.classList.add('on')});
+  var p=v.play();if(p&&p.catch)p.catch(function(){});
 })();
 </script>
 </body>
