@@ -357,7 +357,29 @@
 
   .back{position:fixed;top:14px;left:14px;z-index:300;background:rgba(245,240,232,.92);backdrop-filter:blur(6px);color:var(--ink);text-decoration:none;font-family:'Jost',sans-serif;font-weight:400;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;padding:8px 15px;border-radius:2px;border:1px solid var(--border);transition:background .2s}
   .back:hover{background:#fff;color:var(--terracotta)}
+
+  /* BLOCCO DORMI QUI */
+  .dormi{background:var(--ink);color:var(--cream);padding:56px 24px;text-align:center}
+  .dormi-inner{max-width:640px;margin:0 auto}
+  .dormi-eyebrow{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+  .dormi h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,5vw,38px);line-height:1.15;margin-bottom:16px;color:var(--cream)}
+  .dormi h2 em{color:#E0A15F;font-style:italic}
+  .dormi p{font-size:16px;line-height:1.7;color:#D8CFC2;margin-bottom:14px}
+  .dormi-cta{display:inline-flex;align-items:center;gap:8px;margin-top:14px;padding:13px 30px;background:var(--terracotta);color:#fff;text-decoration:none;font-size:11px;letter-spacing:2px;text-transform:uppercase;border-radius:2px;transition:background .2s}
+  .dormi-cta:hover{background:var(--terracotta-dark)}
+  .dormi-alt{display:block;margin-top:18px;font-size:13px;color:#C9BEAD}
+  .dormi-alt a{color:#E0A15F;text-decoration:underline;text-underline-offset:3px}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Rifugio Collina del Sacro Cuore", "item": "https://viviascoli.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Dove si mangia ad Ascoli Piceno", "item": "https://viviascoli.com/dove-si-mangia.html"}
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -559,6 +581,17 @@
       <a class="place-card" href="https://www.google.com/maps/search/Beer+Coyote+Ascoli+Piceno" target="_blank"><span class="place-icon">🍺</span><span class="place-name">Beer Coyote</span><span class="place-arrow">→</span></a>
       <a class="place-card" href="https://www.google.com/maps/search/Pub+Nicolò+IV+Ascoli+Piceno" target="_blank"><span class="place-icon">🍺</span><span class="place-name">Pub Nicolò IV</span><span class="place-arrow">→</span></a>
       <a class="place-card" href="https://www.google.com/maps/search/Campobase+Rifugio+Urbano+Ascoli+Piceno" target="_blank"><span class="place-icon">🏕️</span><span class="place-name">Campobase – Rifugio Urbano</span><span class="place-arrow">→</span></a>
+    </div>
+  </section>
+
+  <section class="dormi">
+    <div class="dormi-inner">
+      <div class="dormi-eyebrow">Il Rifugio Collina del Sacro Cuore</div>
+      <h2>Ceni in centro, <em>dormi in collina</em></h2>
+      <p>Questa guida nasce dai consigli che diamo ai nostri ospiti. Il rifugio è un appartamento intero sulla collina sopra Ascoli: dalle piazze di travertino risali a piedi in un quarto d'ora, con il centro storico illuminato alle spalle.</p>
+      <p>Terrazza panoramica, cucina attrezzata, parcheggio libero fuori dalla ZTL. Per bici, e-bike e moto c'è la rimessa coperta su richiesta.</p>
+      <a class="dormi-cta" href="/#contatti">Verifica disponibilità</a>
+      <span class="dormi-alt">Non conosci ancora la città? <a href="dove-dormire-ascoli-piceno.html">Le zone dove dormire ad Ascoli Piceno</a></span>
     </div>
   </section>
 </main>

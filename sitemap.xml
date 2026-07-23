@@ -4,7 +4,7 @@
 
   <url>
     <loc>https://viviascoli.com/</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://viviascoli.com/"/>
@@ -54,8 +54,18 @@
   </url>
 
   <url>
+    <loc>https://viviascoli.com/dove-dormire-ascoli-piceno.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://viviascoli.com/dove-dormire-ascoli-piceno.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://viviascoli.com/where-to-stay-ascoli-piceno.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://viviascoli.com/dove-dormire-ascoli-piceno.html"/>
+  </url>
+
+  <url>
     <loc>https://viviascoli.com/attivita.html</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://viviascoli.com/attivita.html"/>
@@ -63,31 +73,37 @@
 
   <url>
     <loc>https://viviascoli.com/cammino-francescano-della-marca.html</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://viviascoli.com/cammino-francescano-della-marca.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://viviascoli.com/where-to-stay-cammino-francescano-della-marca.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://viviascoli.com/cammino-francescano-della-marca.html"/>
   </url>
 
   <url>
     <loc>https://viviascoli.com/cammino-dei-cappuccini.html</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://viviascoli.com/cammino-dei-cappuccini.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://viviascoli.com/where-to-stay-cammino-dei-cappuccini.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://viviascoli.com/cammino-dei-cappuccini.html"/>
   </url>
 
   <url>
     <loc>https://viviascoli.com/bike-friendly-ascoli.html</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://viviascoli.com/bike-friendly-ascoli.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://viviascoli.com/cycling-ascoli-piceno.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://viviascoli.com/bike-friendly-ascoli.html"/>
   </url>
 
   <url>
     <loc>https://viviascoli.com/dove-si-mangia.html</loc>
-    <lastmod>2026-06-14</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://viviascoli.com/dove-si-mangia.html"/>
@@ -95,10 +111,50 @@
 
   <url>
     <loc>https://viviascoli.com/eventi.html</loc>
-    <lastmod>2026-07-07</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://viviascoli.com/eventi.html"/>
+  </url>
+
+  <url>
+    <loc>https://viviascoli.com/where-to-stay-ascoli-piceno.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://viviascoli.com/dove-dormire-ascoli-piceno.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://viviascoli.com/where-to-stay-ascoli-piceno.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://viviascoli.com/dove-dormire-ascoli-piceno.html"/>
+  </url>
+
+  <url>
+    <loc>https://viviascoli.com/where-to-stay-cammino-dei-cappuccini.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://viviascoli.com/cammino-dei-cappuccini.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://viviascoli.com/where-to-stay-cammino-dei-cappuccini.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://viviascoli.com/cammino-dei-cappuccini.html"/>
+  </url>
+
+  <url>
+    <loc>https://viviascoli.com/where-to-stay-cammino-francescano-della-marca.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://viviascoli.com/cammino-francescano-della-marca.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://viviascoli.com/where-to-stay-cammino-francescano-della-marca.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://viviascoli.com/cammino-francescano-della-marca.html"/>
+  </url>
+
+  <url>
+    <loc>https://viviascoli.com/cycling-ascoli-piceno.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://viviascoli.com/bike-friendly-ascoli.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://viviascoli.com/cycling-ascoli-piceno.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://viviascoli.com/bike-friendly-ascoli.html"/>
   </url>
 
 </urlset>
