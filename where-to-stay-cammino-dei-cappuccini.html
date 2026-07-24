@@ -156,7 +156,7 @@
     {
       "@type": "Question",
       "name": "Do you speak English?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Yes. We are Giovanni and Daniela, we live nearby and we answer in English, German and Italian. WhatsApp is the fastest way to reach us."}
+      "acceptedAnswer": {"@type": "Answer", "text": "Honestly, Giovanni and Daniela's English is a work in progress and their German is mostly smiles and goodwill, but between a translation app and a lot of warmth guests and hosts always find a way to understand each other. WhatsApp is the easiest way to reach us."}
     }
   ]
 }
@@ -171,8 +171,19 @@
   ]
 }
 </script>
+<style>
+  .lang-wrap{position:fixed;top:18px;right:18px;z-index:400;display:flex;gap:8px}
+  .lang{background:rgba(243,234,219,.92);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:5px;border-radius:8px;border:1px solid rgba(42,36,30,.15);transition:background .25s,transform .2s;cursor:pointer;line-height:0}
+  .lang svg{height:17px;width:auto;display:block;border-radius:2px;box-shadow:0 0 0 1px rgba(42,36,30,.10)}
+  .lang:hover{background:#fff;transform:translateY(-1px)}
+</style>
 </head>
 <body>
+  <div class="lang-wrap">
+    <a class="lang" href="cammino-dei-cappuccini.html" hreflang="it" aria-label="Italiano" title="Italiano"><svg class="flag" viewBox="0 0 3 2" aria-hidden="true"><rect width="1" height="2" fill="#009246"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#CE2B37"/></svg></a>
+    <a class="lang" href="/de/" hreflang="de" aria-label="Deutsch" title="Deutsch"><svg class="flag" viewBox="0 0 3 2" aria-hidden="true"><rect width="3" height="0.6667" fill="#000"/><rect y="0.6667" width="3" height="0.6667" fill="#DD0000"/><rect y="1.3333" width="3" height="0.6667" fill="#FFCE00"/></svg></a>
+  </div>
+
 
   <a class="back" href="/en/">&#8592; The Refuge</a>
 
@@ -291,7 +302,7 @@
       <div class="place">
         <div class="pkicker">Languages</div>
         <h3>Do you speak English?</h3>
-        <p>Yes. We are Giovanni and Daniela, we live nearby, and we answer in English, German and Italian.</p>
+        <p>Honestly, Giovanni and Daniela's English is a work in progress and their German is mostly smiles and good intentions — but between a translation app, a few words and a lot of warmth we always find a way to understand each other. Write to us, you'll see.</p>
       </div>
 
     </div>
