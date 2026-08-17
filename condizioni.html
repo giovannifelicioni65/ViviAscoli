@@ -245,8 +245,15 @@
         p.classList.toggle('active', p.dataset.lang === l);
       });
       document.documentElement.lang = l;
+      history.replaceState(null, '', '#' + l);
       window.scrollTo({top:0, behavior:'instant'});
     }
+
+    // Apre la pagina nella lingua indicata dall'indirizzo: #en, #de, #it
+    (function(){
+      var l = (location.hash || '').replace('#','').toLowerCase();
+      if (l === 'en' || l === 'de' || l === 'it') setLang(l);
+    })();
   </script>
 
 </body>
