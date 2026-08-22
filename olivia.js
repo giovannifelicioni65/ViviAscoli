@@ -51,8 +51,10 @@
       invia: 'Invia',
       calendario: 'Vedi le date e le tariffe',
       whatsapp: 'Scrivi su WhatsApp',
-      errore: 'Scusa, in questo momento non riesco a risponderti. ' +
-              'Giovanni e Daniela però ci sono sempre:',
+      errore: 'Scusa, in questo momento non riesco a risponderti — è un problema ' +
+              'mio, non tuo. La strada per prenotare però resta aperta: sul ' +
+              'calendario vedi date e tariffe in tempo reale, e Giovanni e ' +
+              'Daniela rispondono sempre.',
       scrivendo: 'Olivia sta scrivendo',
       nota: 'Olivia è un assistente virtuale. Per prezzi e conferme, ' +
             'il calendario e WhatsApp.',
@@ -75,8 +77,9 @@
       invia: 'Send',
       calendario: 'See dates and rates',
       whatsapp: 'Message us on WhatsApp',
-      errore: 'Sorry, I can’t answer right now. ' +
-              'Giovanni and Daniela are always here though:',
+      errore: 'Sorry, I can’t answer right now — my problem, not yours. ' +
+              'Booking still works though: the calendar shows live dates and ' +
+              'rates, and Giovanni and Daniela always reply.',
       scrivendo: 'Olivia is typing',
       nota: 'Olivia is a virtual assistant. For prices and bookings, ' +
             'use the calendar or WhatsApp.',
@@ -99,8 +102,9 @@
       invia: 'Senden',
       calendario: 'Termine und Preise ansehen',
       whatsapp: 'Auf WhatsApp schreiben',
-      errore: 'Entschuldigung, ich kann gerade nicht antworten. ' +
-              'Giovanni und Daniela sind aber immer da:',
+      errore: 'Entschuldigung, ich kann gerade nicht antworten — mein Problem, ' +
+              'nicht Ihres. Buchen geht trotzdem: Im Kalender sehen Sie Termine ' +
+              'und Preise in Echtzeit, und Giovanni und Daniela antworten immer.',
       scrivendo: 'Olivia schreibt',
       nota: 'Olivia ist eine virtuelle Assistentin. Für Preise und ' +
             'Buchungen bitte den Kalender oder WhatsApp nutzen.',
@@ -556,7 +560,12 @@
     }).catch(function () {
       attesa.remove();
       messaggio('lei', t.errore);
-      azioni([{ testo: t.whatsapp, href: CONFIG.whatsapp, tipo: 'primaria' }]);
+      /* Anche quando Olivia è muta, la prenotazione resta a un clic:
+         calendario per primo, WhatsApp sotto. */
+      azioni([
+        { testo: t.calendario, href: CONFIG.calendario, tipo: 'primaria' },
+        { testo: t.whatsapp,   href: CONFIG.whatsapp,   tipo: 'seconda' }
+      ]);
       occupata = false; misura();
     });
   }
