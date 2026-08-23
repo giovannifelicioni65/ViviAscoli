@@ -49,11 +49,11 @@
   .hero{position:relative;height:56svh;min-height:420px;display:flex;align-items:flex-end;color:#fff;overflow:hidden}
   .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.05);animation:kb 18s ease-out forwards}
   @keyframes kb{to{transform:scale(1)}}
-  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,15,10,.18) 0%,rgba(20,15,10,0) 35%,rgba(25,17,10,.78) 100%)}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,15,10,.28) 0%,rgba(20,15,10,.10) 26%,rgba(25,17,10,.52) 58%,rgba(25,17,10,.86) 100%)}
   .hero .wrap{position:relative;z-index:2;padding-bottom:7vh;width:100%}
-  .hero .eyebrow{color:#F0C99A;opacity:.01;animation:up .9s .2s forwards}
-  .hero h1{font-size:clamp(2.4rem,6vw,4.2rem);margin:.18em 0 .35em;text-shadow:0 2px 30px rgba(0,0,0,.35);opacity:.01;animation:up .9s .35s forwards}
-  .hero p{font-size:clamp(1.05rem,2.2vw,1.3rem);max-width:36ch;color:#F5EEE3;text-shadow:0 1px 12px rgba(0,0,0,.4);opacity:.01;animation:up .9s .5s forwards}
+  .hero .eyebrow{color:#F2BE72;text-shadow:0 1px 3px rgba(25,17,10,.6),0 2px 18px rgba(25,17,10,.45);opacity:.01;animation:up .9s .2s forwards}
+  .hero h1{font-size:clamp(2.4rem,6vw,4.2rem);margin:.18em 0 .35em;text-shadow:0 2px 4px rgba(20,15,10,.6),0 2px 30px rgba(0,0,0,.35);opacity:.01;animation:up .9s .35s forwards}
+  .hero p{font-size:clamp(1.05rem,2.2vw,1.3rem);max-width:36ch;color:#F5EEE3;text-shadow:0 1px 3px rgba(20,15,10,.65),0 1px 12px rgba(0,0,0,.4);opacity:.01;animation:up .9s .5s forwards}
   @keyframes up{from{opacity:.01;transform:translateY(26px)}to{opacity:1;transform:none}}
   .btn{display:inline-block;background:var(--terracotta);color:#fff;padding:15px 34px;border-radius:40px;text-decoration:none;font-weight:600;transition:transform .25s,box-shadow .25s,background .25s;box-shadow:0 10px 30px rgba(176,81,47,.35)}
   .btn:hover{transform:translateY(-3px);background:#9c441f;box-shadow:0 14px 38px rgba(176,81,47,.45)}
