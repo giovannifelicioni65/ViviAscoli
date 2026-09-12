@@ -46,7 +46,8 @@
       chips: ['Dove si trova il rifugio?', 'Quanto dista il centro?',
               'Dove andiamo a mangiare?', 'Siamo qui 3 giorni, che giro ci consigli?',
               'Che tempo farà?'],
-      saluto: 'Ciao, sono Olivia! Se hai una domanda su Ascoli o sul Rifugio, sono qui.',
+      saluto: 'Ciao, sono Olivia, la tua assistente virtuale. Se hai una domanda su ' +
+              'Ascoli o sul Rifugio, sono qui.',
       placeholder: 'Scrivi qui la tua domanda…',
       invia: 'Invia',
       calendario: 'Vedi le date e le tariffe',
@@ -72,7 +73,8 @@
       chips: ['Where is the apartment?', 'How far is the old town?',
               'Where should we eat?', 'We have 3 days — what do you suggest?',
               'What’s the weather like?'],
-      saluto: 'Hi, I\'m Olivia! Any question about Ascoli or the Rifugio — I\'m here.',
+      saluto: 'Hi, I\'m Olivia, your virtual assistant. Any question about Ascoli ' +
+              'or the Rifugio — I\'m here.',
       placeholder: 'Type your question…',
       invia: 'Send',
       calendario: 'See dates and rates',
@@ -97,7 +99,8 @@
       chips: ['Wo liegt die Wohnung?', 'Wie weit ist die Altstadt?',
               'Wo sollen wir essen?', 'Wir bleiben 3 Tage — was empfehlen Sie?',
               'Wie wird das Wetter?'],
-      saluto: 'Hallo, ich bin Olivia! Fragen zu Ascoli oder zum Rifugio? Ich bin da.',
+      saluto: 'Hallo, ich bin Olivia, Ihre virtuelle Assistentin. Fragen zu Ascoli ' +
+              'oder zum Rifugio? Ich bin da.',
       placeholder: 'Ihre Frage…',
       invia: 'Senden',
       calendario: 'Termine und Preise ansehen',
