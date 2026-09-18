@@ -635,33 +635,70 @@
 </footer>
 
 <script>
+  /* Parole con cui si puo' cercare una categoria intera.
+     Aggiungerne altre e' sicuro: basta scriverle qui dentro, separate da spazio. */
+  var PAROLE_CATEGORIA = {
+    ristoranti:   'ristorante ristoranti trattoria trattorie osteria osterie cucina cena cenare pranzo pranzare mangiare',
+    pizzeria:     'pizzeria pizzerie pizza pizze pinsa pinseria',
+    pesce:        'pesce pesci pescato mare crudo crudi frutti di mare',
+    etnico:       'etnico etnica etnici giapponese sushi cinese indiano kebab asiatico messicano',
+    stuzzicherie: 'stuzzicherie stuzzicheria apericena aperitivo aperitivi informale tagliere taglieri vino vini enoteca',
+    pub:          'pub birreria birrerie birra birre'
+  };
+
+  /* I numeri dei filtri e le scritte "N locali" si contano da soli:
+     contano le schede effettivamente in vista, quindi seguono anche la ricerca. */
+  function aggiornaConteggi() {
+    var totale = 0;
+    document.querySelectorAll('.category-section').forEach(function (sezione) {
+      var n = 0;
+      sezione.querySelectorAll('.place-card').forEach(function (scheda) {
+        if (scheda.style.display !== 'none') n++;
+      });
+      totale += n;
+      var scritta = sezione.querySelector('.category-count');
+      if (scritta) scritta.textContent = n + (n === 1 ? ' locale' : ' locali');
+      var pallino = document.querySelector('.filter-btn[data-cat="' + sezione.dataset.cat + '"] .count-badge');
+      if (pallino) pallino.textContent = n;
+    });
+    var tutti = document.querySelector('.filter-btn[data-cat="all"] .count-badge');
+    if (tutti) tutti.textContent = totale;
+  }
+
   function filterCat(cat, btn) {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.filter-btn').forEach(function (b) { b.classList.remove('active'); });
     btn.classList.add('active');
-    document.querySelectorAll('.category-section').forEach(sec => {
-      if (cat === 'all' || sec.dataset.cat === cat) {
-        sec.classList.remove('hidden');
-      } else {
-        sec.classList.add('hidden');
-      }
+    document.querySelector('.search-input').value = '';
+    /* rimette in vista tutte le schede: senza questo, dopo una ricerca
+       restavano nascoste anche cambiando filtro */
+    document.querySelectorAll('.place-card').forEach(function (c) { c.style.display = 'flex'; });
+    document.querySelectorAll('.category-section').forEach(function (sec) {
+      if (cat === 'all' || sec.dataset.cat === cat) { sec.classList.remove('hidden'); }
+      else { sec.classList.add('hidden'); }
     });
     document.getElementById('no-results').style.display = 'none';
-    // reset search
-    document.querySelector('.search-input').value = '';
+    aggiornaConteggi();
   }
 
   function searchPlaces(query) {
-    const q = query.toLowerCase().trim();
-    let anyVisible = false;
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    var q = query.toLowerCase().trim();
+    var anyVisible = false;
+    document.querySelectorAll('.filter-btn').forEach(function (b) { b.classList.remove('active'); });
     document.querySelector('[data-cat="all"]').classList.add('active');
 
-    document.querySelectorAll('.category-section').forEach(sec => {
-      let secVisible = false;
+    document.querySelectorAll('.category-section').forEach(function (sec) {
+      var secVisible = false;
       sec.classList.remove('hidden');
-      sec.querySelectorAll('.place-card').forEach(card => {
-        const name = card.querySelector('.place-name').textContent.toLowerCase();
-        if (!q || name.includes(q)) {
+      /* La ricerca vale anche sulla categoria: scrivendo "pizzeria" escono tutte
+         le pizzerie, comprese quelle che nel nome non hanno la parola. */
+      var titolo = sec.querySelector('.category-name');
+      var parole = (sec.dataset.cat + ' ' + (titolo ? titolo.textContent : '') + ' ' +
+                    (PAROLE_CATEGORIA[sec.dataset.cat] || '')).toLowerCase();
+      var categoriaCorrisponde = q.length >= 3 && parole.indexOf(q) !== -1;
+
+      sec.querySelectorAll('.place-card').forEach(function (card) {
+        var nome = card.querySelector('.place-name').textContent.toLowerCase();
+        if (!q || categoriaCorrisponde || nome.indexOf(q) !== -1) {
           card.style.display = 'flex';
           secVisible = true;
           anyVisible = true;
@@ -673,24 +710,10 @@
     });
 
     document.getElementById('no-results').style.display = (q && !anyVisible) ? 'block' : 'none';
+    aggiornaConteggi();
   }
-</script>
-<script>
-  /* I conteggi si scrivono da soli: aggiungi o togli una scheda e i numeri
-     dei filtri e delle intestazioni si aggiornano, non vanno toccati a mano. */
-  (function () {
-    var totale = 0;
-    document.querySelectorAll('.category-section').forEach(function (sezione) {
-      var n = sezione.querySelectorAll('.place-card').length;
-      totale += n;
-      var scritta = sezione.querySelector('.category-count');
-      if (scritta) scritta.textContent = n + (n === 1 ? ' locale' : ' locali');
-      var pallino = document.querySelector('.filter-btn[data-cat="' + sezione.dataset.cat + '"] .count-badge');
-      if (pallino) pallino.textContent = n;
-    });
-    var tutti = document.querySelector('.filter-btn[data-cat="all"] .count-badge');
-    if (tutti) tutti.textContent = totale;
-  })();
+
+  aggiornaConteggi();
 </script>
 <!-- Conteggio delle visite, senza cookie. Frammento fornito da Cloudflare. -->
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "107412d2c2da410a809782d5da9c3b33"}'></script><!-- End Cloudflare Web Analytics -->
