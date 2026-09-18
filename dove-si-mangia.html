@@ -4,8 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" href="favicon.png">
-<title>Dove si mangia ad Ascoli Piceno — Guida ai ristoranti</title>
-<meta name="description" content="La guida ai ristoranti di Ascoli Piceno scelta da chi ci vive: 78 locali tra ristoranti, pizzerie, pesce, etnico, stuzzicherie e pub.">
+<title>Dove si mangia ad Ascoli Piceno · i locali per i nostri ospiti</title>
+<meta name="description" content="I locali che consigliamo agli ospiti del Rifugio Collina del Sacro Cuore: ristoranti, pizzerie, pesce, stuzzicherie e pub ad Ascoli e dintorni.">
+<!-- Anteprima quando il link viene condiviso su WhatsApp, Facebook, Telegram -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Rifugio Collina del Sacro Cuore">
+<meta property="og:title" content="Dove si mangia ad Ascoli Piceno">
+<meta property="og:description" content="I locali che consigliamo agli ospiti del Rifugio Collina del Sacro Cuore.">
+<meta property="og:url" content="https://viviascoli.com/dove-si-mangia.html">
+<meta property="og:image" content="https://viviascoli.com/img/og-anteprima.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://viviascoli.com/dove-si-mangia.html">
 <link rel="preload" href="/fonts/jost-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cormorant-garamond-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -401,6 +412,7 @@
   <h1>Dove si <em>mangia</em><br>ad Ascoli</h1>
   <p class="header-sub">e dintorni</p>
   <p class="header-desc">Questi sono solo alcuni dei luoghi dove potete degustare la cucina locale e non solo</p>
+  <p class="header-desc" style="margin-top:.85em">Ve li consiglia il <a href="/" style="color:inherit;text-decoration:underline;text-underline-offset:3px">Rifugio Collina del Sacro Cuore</a>, l'appartamento sulla collina sopra Ascoli.</p>
   <div class="header-ornament"></div>
 </header>
 
@@ -571,7 +583,7 @@
       <a class="place-card" href="https://www.google.com/maps/search/180+bar+Ascoli+Piceno" target="_blank"><span class="place-icon">🥂</span><span class="place-name">180</span><span class="place-arrow">→</span></a>
       <a class="place-card" href="https://www.google.com/maps/search/Lorenz+Cafè+Ascoli+Piceno" target="_blank"><span class="place-icon">🥩</span><span class="place-name">Lorenz Cafè – Steak House Pizzeria</span><span class="place-arrow">→</span></a>
       <a class="place-card" href="https://www.google.com/maps/search/Bottega+Panichi+1943+Ascoli+Piceno" target="_blank"><span class="place-icon">🧀</span><span class="place-name">Bottega Panichi 1943</span><span class="place-arrow">→</span></a>
-      <a class="place-card" href="https://www.google.com/maps/search/Chisc+Restaurant+Cocktail+bar+Ascoli+Piceno" target="_blank"><span class="place-icon">🥂</span><span class="place-name">Chisc Restaurant&Cocktail bar</span><span class="place-arrow">→</span></a>
+      <a class="place-card" href="https://www.google.com/maps/search/Chisc+Restaurant+Cocktail+bar+Ascoli+Piceno" target="_blank"><span class="place-icon">🥂</span><span class="place-name">Chisc Restaurant &amp; Cocktail bar</span><span class="place-arrow">→</span></a>
       <a class="place-card" href="https://www.google.com/maps/search/Dirty+miscele+creative+Ascoli+Piceno" target="_blank"><span class="place-icon">🍹</span><span class="place-name">Dirty – Miscele Creative</span><span class="place-arrow">→</span></a>
       <a class="place-card" href="https://www.google.com/maps/search/Vinaccio+Ascoli+Piceno" target="_blank"><span class="place-icon">🍷</span><span class="place-name">Vinaccio</span><span class="place-arrow">→</span></a>  
       <a class="place-card" href="https://www.google.com/maps/search/Blanc+Ascoli+Piceno" target="_blank"><span class="place-icon">🥂</span><span class="place-name">Blanc Ascoli Piceno</span><span class="place-arrow">→</span></a>
@@ -662,6 +674,23 @@
 
     document.getElementById('no-results').style.display = (q && !anyVisible) ? 'block' : 'none';
   }
+</script>
+<script>
+  /* I conteggi si scrivono da soli: aggiungi o togli una scheda e i numeri
+     dei filtri e delle intestazioni si aggiornano, non vanno toccati a mano. */
+  (function () {
+    var totale = 0;
+    document.querySelectorAll('.category-section').forEach(function (sezione) {
+      var n = sezione.querySelectorAll('.place-card').length;
+      totale += n;
+      var scritta = sezione.querySelector('.category-count');
+      if (scritta) scritta.textContent = n + (n === 1 ? ' locale' : ' locali');
+      var pallino = document.querySelector('.filter-btn[data-cat="' + sezione.dataset.cat + '"] .count-badge');
+      if (pallino) pallino.textContent = n;
+    });
+    var tutti = document.querySelector('.filter-btn[data-cat="all"] .count-badge');
+    if (tutti) tutti.textContent = totale;
+  })();
 </script>
 <!-- Conteggio delle visite, senza cookie. Frammento fornito da Cloudflare. -->
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "107412d2c2da410a809782d5da9c3b33"}'></script><!-- End Cloudflare Web Analytics -->
