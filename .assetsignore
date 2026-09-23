@@ -1,0 +1,11 @@
+# File che Cloudflare NON deve pubblicare, anche se stanno su GitHub
+.git
+.github
+_cloudflare
+wrangler.jsonc
+.assetsignore
+CNAME
+README.md
+LEGGIMI*
+*.md
+olivia-worker.js
