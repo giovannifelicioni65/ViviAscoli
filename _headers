@@ -1,0 +1,23 @@
+# Intestazioni del sito su Cloudflare. Non va modificato.
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+
+# Foto e video: il browser le tiene 30 giorni.
+# Se sostituisci una foto tenendo lo stesso nome, chi è già passato
+# può vedere la vecchia fino a 30 giorni: meglio dare un nome nuovo.
+/img/*
+  Cache-Control: public, max-age=2592000
+
+/hero-video.mp4
+  Cache-Control: public, max-age=2592000
+
+# I font non cambiano mai
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# L'indirizzo di prova di Cloudflare non deve finire su Google
+https://viviascoli-sito.giovannifelicioni65.workers.dev/*
+  X-Robots-Tag: noindex
